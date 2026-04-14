@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moonveil | Private Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">
+    <span data-i18n="announceAge">Adults only, 18+</span>
+    <span data-i18n="announceBenefits">Discreet packaging · Private support · Beginner-friendly guidance</span>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="./index.html" aria-label="Moonveil home">
+      <span class="brand-mark">M</span>
+      <span class="brand-text">
+        <strong>Moonveil</strong>
+        <small>Intimate Wellness</small>
+      </span>
+    </a>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="nav-link" href="./index.html" data-i18n="navHome">Home</a>
+      <a class="nav-link" href="./index.html#collections" data-i18n="navCollections">Shop by Need</a>
+      <a class="nav-link" href="./index.html#promise" data-i18n="navPromise">Our Promise</a>
+      <a class="nav-link" href="./index.html#journal" data-i18n="navGuides">Guides</a>
+      <a class="nav-link active" href="./contact.html" data-i18n="navContact">Contact</a>
+    </nav>
+
+    <div class="language-switch" aria-label="Language switcher">
+      <button type="button" data-lang-switch="en">EN</button>
+      <button type="button" data-lang-switch="zh">中文</button>
+    </div>
+  </header>
+
+  <main class="contact-layout">
+    <section class="contact-card">
+      <p class="eyebrow" data-i18n="contactEyebrow">Private Support</p>
+      <h1 data-i18n="contactTitle">Ask privately</h1>
+      <p class="contact-intro" data-i18n="contactIntro">
+        If you are not sure what fits your needs, describe your comfort level, experience, and shopping goal. This demo stores messages in your browser only.
+      </p>
+
+      <div class="contact-list">
+        <div class="contact-item">
+          <span class="contact-label" data-i18n="contactGoodForLabel">Good for</span>
+          <strong data-i18n="contactGoodFor">First-time shopping, couples, care routines, discreet delivery</strong>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label" data-i18n="contactNoShareLabel">You do not need to share</span>
+          <strong data-i18n="contactNoShare">Real name, phone number, address, or sensitive identity details</strong>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label" data-i18n="contactHelpfulLabel">Helpful details</span>
+          <strong data-i18n="contactHelpful">Experience level, budget, preferred intensity, solo or shared use</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="message-board-section">
+      <div class="message-board-header">
+        <p class="eyebrow" data-i18n="messageEyebrow">Message</p>
+        <h2 data-i18n="messageTitle">Leave a private note</h2>
+        <p data-i18n="messageIntro">You can use a nickname. Submitted notes stay visible in this browser after refresh.</p>
+      </div>
+
+      <form class="message-form" data-message-form>
+        <label>
+          <span data-i18n="fieldName">Nickname</span>
+          <input type="text" name="name" maxlength="20" placeholder="e.g. Luna, Private shopper" data-i18n-placeholder="fieldNamePlaceholder" required>
+        </label>
+        <label>
+          <span data-i18n="fieldContact">Optional contact</span>
+          <input type="text" name="contact" maxlength="60" placeholder="Optional email or preferred contact note" data-i18n-placeholder="fieldContactPlaceholder">
+        </label>
+        <label>
+          <span data-i18n="fieldMessage">Your question</span>
+          <textarea name="message" rows="6" maxlength="260" placeholder="Example: I am new and want something quiet, gentle, and easy to clean for solo use." data-i18n-placeholder="fieldMessagePlaceholder" required></textarea>
+        </label>
+        <button class="button primary" type="submit" data-i18n="fieldSubmit">Send Message</button>
+      </form>
+
+      <div class="message-board" data-message-board>
+        <article class="message-empty">
+          <h3 data-i18n="emptyTitle">No messages yet</h3>
+          <p data-i18n="emptyText">Submit the form above and your private note will appear here.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="url(#paint0_linear)"/>
+  <circle cx="1224" cy="179" r="104" fill="#F7D7B6"/>
+  <circle cx="303" cy="194" r="3" fill="#FFF7E7"/>
+  <circle cx="410" cy="136" r="4" fill="#FFF7E7"/>
+  <circle cx="560" cy="231" r="3" fill="#FFF7E7"/>
+  <circle cx="671" cy="123" r="4" fill="#FFF7E7"/>
+  <circle cx="785" cy="204" r="3" fill="#FFF7E7"/>
+  <circle cx="938" cy="108" r="4" fill="#FFF7E7"/>
+  <circle cx="1073" cy="238" r="3" fill="#FFF7E7"/>
+  <circle cx="1347" cy="282" r="3" fill="#FFF7E7"/>
+  <path d="M0 640L151 618L304 643L473 610L623 632L758 587L939 632L1095 612L1263 646L1437 596L1600 625V900H0V640Z" fill="#2D3F5F"/>
+  <path d="M0 721L120 703L270 742L456 693L614 723L760 684L954 746L1142 705L1290 744L1474 689L1600 708V900H0V721Z" fill="#4A5C7A"/>
+  <path d="M0 804L194 752L351 796L535 750L726 817L949 742L1132 811L1362 759L1600 803V900H0V804Z" fill="#D17D5B"/>
+  <defs>
+    <linearGradient id="paint0_linear" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E1830"/>
+      <stop offset="0.58" stop-color="#243B61"/>
+      <stop offset="1" stop-color="#F2C088"/>
+    </linearGradient>
+  </defs>
+</svg>
