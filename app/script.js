@@ -256,39 +256,435 @@ const translations = {
   },
 };
 
+translations.ja = {
+  pageTitleHome: "aylamuse | インティメイトウェルネス用品",
+  pageTitleContact: "aylamuse | プライベート相談",
+  announceAge: "18歳以上の方のみ",
+  announceBenefits: "目立たない梱包 · プライベートサポート · 初心者向けガイド",
+  navHome: "ホーム",
+  navCollections: "目的で選ぶ",
+  navProducts: "商品ナビ",
+  navPromise: "お約束",
+  navGuides: "ガイド",
+  navContact: "お問い合わせ",
+  productNavBeginners: "初心者キット",
+  productNavSolo: "ソロウェルネス",
+  productNavCouples: "カップル向け",
+  productNavCare: "ケア用品",
+  heroEyebrow: "やさしく設計されたプレジャー",
+  heroTitle: "好奇心と自信を持つ大人のためのインティメイトウェルネス用品",
+  heroText:
+    "世界のお客様に向けたDTC独立ストアのコンセプトです。現在は商品写真を使わず、信頼、プライバシー、学び、わかりやすい選び方に重点を置いています。",
+  heroPrimary: "コレクションを見る",
+  heroSecondary: "診断を始める",
+  artCard: "目立たない配送 · 身体に配慮 · やさしい案内",
+  trustOne: "目立たない梱包",
+  trustTwo: "身体に配慮",
+  trustThree: "プライベート診断",
+  trustFour: "グローバルサポート",
+  finderEyebrow: "プライベート診断",
+  finderTitle: "どこから始めるか迷ったら、まずは求める感覚から。",
+  finderText:
+    "成熟したインティメイトウェルネスストアでは、選ぶ負担を減らすために診断をよく使います。ここでは経験、関係性、ケアの目的から選びやすく案内します。",
+  finderOneTitle: "はじめてです",
+  finderOneText: "やさしい刺激、静かな使用感、簡単なお手入れ",
+  finderTwoTitle: "カップルで",
+  finderTwoText: "つながり、会話、ふたりでの発見",
+  finderThreeTitle: "ケア用品",
+  finderThreeText: "潤滑、洗浄、保管、アフターケア",
+  collectionsEyebrow: "コレクション",
+  collectionsTitle: "難しい商品名ではなく、目的から選ぶ",
+  collectionsText:
+    "商品写真がまだ少ない初期の独立ストアでは、カテゴリ説明が選び方の中心になります。用途を理解してから具体的な商品を比較できます。",
+  collectionOneKicker: "初心者向け",
+  collectionOneTitle: "はじめての発見",
+  collectionOneText: "インティメイトウェルネスに落ち着いて踏み出したい方のための、やさしく選びやすい入口です。",
+  collectionCta: "おすすめを相談",
+  collectionTwoKicker: "ひとり時間",
+  collectionTwoTitle: "パーソナルプレジャー",
+  collectionTwoText: "快適さ、自信、静かな時間、シンプルなセルフケアを中心に選べます。",
+  collectionThreeKicker: "ふたりで",
+  collectionThreeTitle: "カップルとつながり",
+  collectionThreeText: "一緒に探求し、会話を深め、プレッシャーなく親密さを楽しむために。",
+  collectionFourKicker: "ケア",
+  collectionFourTitle: "ケアとアクセサリー",
+  collectionFourText: "潤滑、洗浄、保管、基本的なケア用品で、より快適な体験へ。",
+  howEyebrow: "使い方",
+  howTitle: "好奇心から自信へ。すべてのステップをわかりやすく。",
+  stepOne: "目的を選ぶ",
+  stepTwo: "素材を確認",
+  stepThree: "強さを選ぶ",
+  stepFour: "目立たず配送",
+  stepFive: "ガイドを読む",
+  promiseEyebrow: "私たちの約束",
+  promiseTitle: "信頼が最初の機能です",
+  promiseOneTitle: "プライバシー優先",
+  promiseOneText: "閲覧、サポート、梱包まで、わかりやすく控えめな表現を大切にします。",
+  promiseTwoTitle: "素材を明確に",
+  promiseTwoText: "身体に触れる素材、洗浄方法、用途、安全のポイントをシンプルに案内します。",
+  promiseThreeTitle: "初心者にやさしい",
+  promiseThreeText: "快適さ、境界線、好みから始める、学び中心の選び方です。",
+  proofEyebrow: "独立ストア向け",
+  proofTitle: "商品写真がなくても、世界向けDTCに必要な信頼を伝える",
+  proofText:
+    "プライバシーの安心感、ガイド付きの選択、教育コンテンツ、気軽な相談導線を組み合わせています。",
+  metricOne: "プライバシー重視のメッセージ",
+  metricTwo: "目的別の入口",
+  metricThree: "セルフガイド型レイアウト",
+  journalEyebrow: "ジャーナル",
+  journalTitle: "インティメイトウェルネスガイド",
+  guideOneTitle: "初めて選ぶときに見るべきポイントは？",
+  guideOneText: "素材の安全性、音、洗いやすさ、強さ、用途に対する快適さから確認しましょう。",
+  guideTwoTitle: "カップルで親密な商品について話すには？",
+  guideTwoText: "具体的な商品より先に、気持ち、境界線、好奇心、同意から話し始めましょう。",
+  matchEyebrow: "プライベート提案",
+  matchTitle: "選び方を手伝いましょうか？",
+  matchText:
+    "経験レベル、ひとり用かふたり用か、求める快適さを教えてください。方向性を絞るお手伝いをします。",
+  matchCta: "こっそり相談",
+  faqEyebrow: "FAQ",
+  faqTitle: "よくある質問に、やさしく回答",
+  faqOneTitle: "梱包で中身がわかりますか？",
+  faqOneText: "可能な場合は目立たない外装と中立的な差出人情報を使い、外側に敏感な商品カテゴリ名を出さないようにします。",
+  faqTwoTitle: "初心者はどう選べばいいですか？",
+  faqTwoText: "用途、強さ、お手入れの手間、音、素材情報を確認してからモデルを比較しましょう。",
+  faqThreeTitle: "このサイトは露骨ですか？",
+  faqThreeText: "大人向けですが、敬意がありウェルネス寄りの表現です。露骨な画像は使わず、学びを中心にしています。",
+  ctaEyebrow: "プライベートサポート",
+  ctaTitle: "質問して大丈夫です",
+  ctaText:
+    "本名を共有する必要はありません。快適さ、不安、選びたい目的を教えていただければ、やさしく提案します。",
+  ctaButton: "お問い合わせ",
+  newsletterEyebrow: "ソフトローンチ",
+  newsletterTitle: "プライベートウェルネスリストに参加",
+  newsletterPlaceholder: "ガイドや新着情報を受け取るメールを入力",
+  newsletterButton: "登録",
+  newsletterNote: "デモフォームです。正式公開時にはプライバシーポリシー、同意チェック、配信停止案内を追加してください。",
+  contactEyebrow: "プライベートサポート",
+  contactTitle: "こっそり相談",
+  contactIntro:
+    "何が合うかわからない場合は、快適さ、経験、選びたい目的を書いてください。このデモではメッセージはブラウザ内にのみ保存されます。",
+  contactGoodForLabel: "相談に向いている内容",
+  contactGoodFor: "初めての購入、カップルでの使用、ケアルーティン、目立たない配送",
+  contactNoShareLabel: "共有しなくてよい情報",
+  contactNoShare: "本名、電話番号、住所、センシティブな個人情報",
+  contactHelpfulLabel: "あると役立つ情報",
+  contactHelpful: "経験レベル、予算、好みの強さ、ひとり用かふたり用か",
+  messageEyebrow: "メッセージ",
+  messageTitle: "プライベートメモを残す",
+  messageIntro: "ニックネームで大丈夫です。送信したメモは更新後もこのブラウザに表示されます。",
+  fieldName: "ニックネーム",
+  fieldNamePlaceholder: "例：Luna、匿名のお客様",
+  fieldContact: "任意の連絡先",
+  fieldContactPlaceholder: "任意のメール、または希望する連絡方法",
+  fieldMessage: "ご質問",
+  fieldMessagePlaceholder: "例：初心者です。ひとり用で静か、やさしく、洗いやすいものを探しています。",
+  fieldSubmit: "メッセージを送信",
+  emptyTitle: "まだメッセージはありません",
+  emptyText: "上のフォームを送信すると、プライベートメモがここに表示されます。",
+  noContact: "連絡先未入力",
+};
+
+const sharedLocalizedTranslations = {
+  de: {
+    pageTitleHome: "aylamuse | Intime Wellness-Produkte",
+    pageTitleContact: "aylamuse | Private Beratung",
+    announceAge: "Nur für Erwachsene ab 18",
+    announceBenefits: "Diskrete Verpackung · Private Unterstützung · Anfängerfreundliche Anleitung",
+    navHome: "Startseite",
+    navCollections: "Nach Bedarf shoppen",
+    navProducts: "Produkte",
+    navPromise: "Unser Versprechen",
+    navGuides: "Ratgeber",
+    navContact: "Kontakt",
+    productNavBeginners: "Einsteiger-Sets",
+    productNavSolo: "Solo-Wellness",
+    productNavCouples: "Für Paare",
+    productNavCare: "Pflegezubehör",
+    heroEyebrow: "Sanft gestaltete Lust",
+    heroTitle: "Intime Wellness-Produkte für neugierige, selbstbewusste Erwachsene",
+    heroText: "Ein unabhängiges DTC-Shopkonzept für globale Kundinnen und Kunden, mit Fokus auf Vertrauen, Privatsphäre, Bildung und klare Auswahlwege.",
+    heroPrimary: "Kollektionen ansehen",
+    heroSecondary: "Finder starten",
+    trustOne: "Diskrete Verpackung",
+    trustTwo: "Körperbewusster Fokus",
+    trustThree: "Privater Finder",
+    trustFour: "Globaler Support",
+    finderEyebrow: "Privater Finder",
+    finderTitle: "Nicht sicher, wo du anfangen sollst? Starte mit dem Gefühl, das du suchst.",
+    finderText: "Diese Karten führen nach Erfahrung, Beziehungskontext und Pflegebedarf.",
+    finderOneTitle: "Ich bin neu hier",
+    finderOneText: "Sanfte Intensität, leise Nutzung, einfache Reinigung",
+    finderTwoTitle: "Für Paare",
+    finderTwoText: "Verbindung, Kommunikation, gemeinsames Entdecken",
+    finderThreeTitle: "Pflege-Basics",
+    finderThreeText: "Gleitmittel, Reinigung, Aufbewahrung, Nachpflege",
+    collectionsEyebrow: "Kollektionen",
+    collectionsTitle: "Nach Bedarf shoppen, nicht nach verwirrenden Produktnamen",
+    collectionOneKicker: "Für Anfänger",
+    collectionOneTitle: "Erste Entdeckung",
+    collectionCta: "Empfehlung erhalten",
+    collectionTwoKicker: "Solo-Zeit",
+    collectionTwoTitle: "Persönliche Lust",
+    collectionThreeKicker: "Gemeinsam",
+    collectionThreeTitle: "Paare & Verbindung",
+    collectionFourKicker: "Pflege",
+    collectionFourTitle: "Pflege & Zubehör",
+    contactTitle: "Privat fragen",
+    fieldName: "Spitzname",
+    fieldContact: "Optionaler Kontakt",
+    fieldMessage: "Deine Frage",
+    fieldSubmit: "Nachricht senden",
+    emptyTitle: "Noch keine Nachrichten",
+    noContact: "Kein Kontakt angegeben",
+  },
+  pt: {
+    pageTitleHome: "aylamuse | Essenciais de bem-estar íntimo",
+    pageTitleContact: "aylamuse | Contato privado",
+    announceAge: "Apenas adultos, 18+",
+    announceBenefits: "Embalagem discreta · Suporte privado · Guia para iniciantes",
+    navHome: "Início",
+    navCollections: "Comprar por necessidade",
+    navProducts: "Produtos",
+    navPromise: "Nossa promessa",
+    navGuides: "Guias",
+    navContact: "Contato",
+    productNavBeginners: "Kits para iniciantes",
+    productNavSolo: "Bem-estar solo",
+    productNavCouples: "Para casais",
+    productNavCare: "Cuidados essenciais",
+    heroEyebrow: "Prazer com design suave",
+    heroTitle: "Essenciais de bem-estar íntimo para adultos curiosos e confiantes",
+    heroText: "Um conceito de loja independente DTC para clientes globais, focado em confiança, privacidade, educação e caminhos claros de escolha.",
+    heroPrimary: "Explorar coleções",
+    heroSecondary: "Iniciar o guia",
+    trustOne: "Embalagem discreta",
+    trustTwo: "Foco seguro para o corpo",
+    trustThree: "Guia privado",
+    trustFour: "Suporte global",
+    finderTitle: "Não sabe por onde começar? Comece pelo que deseja sentir.",
+    finderOneTitle: "Sou iniciante",
+    finderOneText: "Intensidade suave, uso silencioso, limpeza fácil",
+    finderTwoTitle: "Para casais",
+    finderThreeTitle: "Cuidados essenciais",
+    collectionsEyebrow: "Coleções",
+    collectionsTitle: "Compre por necessidade, não por nomes confusos",
+    collectionOneKicker: "Para iniciantes",
+    collectionOneTitle: "Primeira descoberta",
+    collectionCta: "Receber recomendação",
+    collectionTwoTitle: "Prazer pessoal",
+    collectionThreeTitle: "Casais e conexão",
+    collectionFourTitle: "Cuidados e acessórios",
+    contactTitle: "Pergunte em privado",
+    fieldName: "Apelido",
+    fieldContact: "Contato opcional",
+    fieldMessage: "Sua pergunta",
+    fieldSubmit: "Enviar mensagem",
+  },
+  es: {
+    pageTitleHome: "aylamuse | Esenciales de bienestar íntimo",
+    pageTitleContact: "aylamuse | Contacto privado",
+    announceAge: "Solo adultos, 18+",
+    announceBenefits: "Embalaje discreto · Soporte privado · Guía para principiantes",
+    navHome: "Inicio",
+    navCollections: "Comprar por necesidad",
+    navProducts: "Productos",
+    navPromise: "Nuestra promesa",
+    navGuides: "Guías",
+    navContact: "Contacto",
+    productNavBeginners: "Kits para principiantes",
+    productNavSolo: "Bienestar individual",
+    productNavCouples: "Para parejas",
+    productNavCare: "Cuidados esenciales",
+    heroEyebrow: "Placer diseñado con suavidad",
+    heroTitle: "Esenciales de bienestar íntimo para adultos curiosos y seguros",
+    heroText: "Un concepto de tienda independiente DTC para clientes globales, centrado en confianza, privacidad, educación y rutas claras de elección.",
+    heroPrimary: "Explorar colecciones",
+    heroSecondary: "Iniciar el buscador",
+    trustOne: "Embalaje discreto",
+    trustTwo: "Enfoque seguro para el cuerpo",
+    trustThree: "Buscador privado",
+    trustFour: "Soporte global",
+    finderTitle: "¿No sabes por dónde empezar? Empieza por cómo quieres sentirte.",
+    finderOneTitle: "Soy principiante",
+    finderOneText: "Intensidad suave, uso silencioso, limpieza fácil",
+    finderTwoTitle: "Para parejas",
+    finderThreeTitle: "Cuidados esenciales",
+    collectionsEyebrow: "Colecciones",
+    collectionsTitle: "Compra por necesidad, no por nombres confusos",
+    collectionOneKicker: "Para principiantes",
+    collectionOneTitle: "Primer descubrimiento",
+    collectionCta: "Recibir recomendación",
+    collectionTwoTitle: "Placer personal",
+    collectionThreeTitle: "Parejas y conexión",
+    collectionFourTitle: "Cuidados y accesorios",
+    contactTitle: "Pregunta en privado",
+    fieldName: "Apodo",
+    fieldContact: "Contacto opcional",
+    fieldMessage: "Tu pregunta",
+    fieldSubmit: "Enviar mensaje",
+  },
+  fr: {
+    pageTitleHome: "aylamuse | Essentiels de bien-être intime",
+    pageTitleContact: "aylamuse | Contact privé",
+    announceAge: "Adultes uniquement, 18+",
+    announceBenefits: "Emballage discret · Support privé · Guide pour débutants",
+    navHome: "Accueil",
+    navCollections: "Acheter par besoin",
+    navProducts: "Produits",
+    navPromise: "Notre promesse",
+    navGuides: "Guides",
+    navContact: "Contact",
+    productNavBeginners: "Kits débutants",
+    productNavSolo: "Bien-être solo",
+    productNavCouples: "Pour couples",
+    productNavCare: "Soins essentiels",
+    heroEyebrow: "Plaisir conçu avec douceur",
+    heroTitle: "Essentiels de bien-être intime pour adultes curieux et confiants",
+    heroText: "Un concept de boutique indépendante DTC pour une clientèle mondiale, centré sur la confiance, la confidentialité, l'éducation et des parcours de choix clairs.",
+    heroPrimary: "Explorer les collections",
+    heroSecondary: "Lancer le guide",
+    trustOne: "Emballage discret",
+    trustTwo: "Respect du corps",
+    trustThree: "Guide privé",
+    trustFour: "Support global",
+    finderTitle: "Vous ne savez pas par où commencer ? Commencez par ce que vous voulez ressentir.",
+    finderOneTitle: "Je débute",
+    finderOneText: "Intensité douce, usage silencieux, nettoyage facile",
+    finderTwoTitle: "Pour couples",
+    finderThreeTitle: "Soins essentiels",
+    collectionsEyebrow: "Collections",
+    collectionsTitle: "Achetez par besoin, pas par noms compliqués",
+    collectionOneKicker: "Pour débutants",
+    collectionOneTitle: "Première découverte",
+    collectionCta: "Obtenir une recommandation",
+    collectionTwoTitle: "Plaisir personnel",
+    collectionThreeTitle: "Couples et connexion",
+    collectionFourTitle: "Soins et accessoires",
+    contactTitle: "Demander en privé",
+    fieldName: "Surnom",
+    fieldContact: "Contact facultatif",
+    fieldMessage: "Votre question",
+    fieldSubmit: "Envoyer le message",
+  },
+  it: {
+    navHome: "Home", navCollections: "Acquista per esigenza", navProducts: "Prodotti", navPromise: "La nostra promessa", navGuides: "Guide", navContact: "Contatto",
+    productNavBeginners: "Kit principianti", productNavSolo: "Benessere solo", productNavCouples: "Per coppie", productNavCare: "Cura essenziale",
+    heroTitle: "Essenziali di benessere intimo per adulti curiosi e sicuri", heroPrimary: "Esplora collezioni", finderOneTitle: "Sono principiante", finderTwoTitle: "Per coppie", finderThreeTitle: "Cura essenziale",
+    collectionsTitle: "Acquista per esigenza, non per nomi confusi", collectionOneTitle: "Prima scoperta", collectionTwoTitle: "Piacere personale", collectionThreeTitle: "Coppie e connessione", collectionFourTitle: "Cura e accessori",
+    contactTitle: "Chiedi in privato", fieldName: "Nickname", fieldContact: "Contatto opzionale", fieldMessage: "La tua domanda", fieldSubmit: "Invia messaggio",
+  },
+  ru: {
+    navHome: "Главная", navCollections: "По потребности", navProducts: "Товары", navPromise: "Наше обещание", navGuides: "Гиды", navContact: "Контакты",
+    productNavBeginners: "Наборы новичка", productNavSolo: "Соло wellness", productNavCouples: "Для пар", productNavCare: "Уход",
+    heroTitle: "Товары интимного wellness для любопытных и уверенных взрослых", heroPrimary: "Смотреть коллекции", finderOneTitle: "Я новичок", finderTwoTitle: "Для пар", finderThreeTitle: "Основы ухода",
+    collectionsTitle: "Выбирайте по потребности, а не по сложным названиям", collectionOneTitle: "Первое знакомство", collectionTwoTitle: "Личное удовольствие", collectionThreeTitle: "Пары и связь", collectionFourTitle: "Уход и аксессуары",
+    contactTitle: "Спросить приватно", fieldName: "Ник", fieldContact: "Контакт по желанию", fieldMessage: "Ваш вопрос", fieldSubmit: "Отправить",
+  },
+  ko: {
+    navHome: "홈", navCollections: "필요별 쇼핑", navProducts: "제품", navPromise: "약속", navGuides: "가이드", navContact: "문의",
+    productNavBeginners: "입문 키트", productNavSolo: "솔로 웰니스", productNavCouples: "커플용", productNavCare: "케어 필수품",
+    heroTitle: "호기심 있고 자신감 있는 성인을 위한 인티밋 웰니스 제품", heroPrimary: "컬렉션 보기", finderOneTitle: "처음이에요", finderTwoTitle: "커플용", finderThreeTitle: "케어 필수품",
+    collectionsTitle: "복잡한 제품명보다 필요에 따라 선택하세요", collectionOneTitle: "첫 발견", collectionTwoTitle: "개인적 즐거움", collectionThreeTitle: "커플과 연결", collectionFourTitle: "케어와 액세서리",
+    contactTitle: "비공개로 문의", fieldName: "닉네임", fieldContact: "선택 연락처", fieldMessage: "질문", fieldSubmit: "메시지 보내기",
+  },
+  ar: {
+    navHome: "الرئيسية", navCollections: "تسوق حسب الحاجة", navProducts: "المنتجات", navPromise: "وعدنا", navGuides: "الأدلة", navContact: "اتصل بنا",
+    productNavBeginners: "مجموعات للمبتدئين", productNavSolo: "عناية فردية", productNavCouples: "للأزواج", productNavCare: "أساسيات العناية",
+    heroTitle: "أساسيات العافية الحميمة للبالغين الفضوليين والواثقين", heroPrimary: "استكشف المجموعات", finderOneTitle: "أنا مبتدئ", finderTwoTitle: "للأزواج", finderThreeTitle: "أساسيات العناية",
+    collectionsTitle: "تسوق حسب الحاجة، لا حسب أسماء مربكة", collectionOneTitle: "الاكتشاف الأول", collectionTwoTitle: "متعة شخصية", collectionThreeTitle: "الأزواج والتواصل", collectionFourTitle: "العناية والإكسسوارات",
+    contactTitle: "اسأل بخصوصية", fieldName: "الاسم المستعار", fieldContact: "وسيلة تواصل اختيارية", fieldMessage: "سؤالك", fieldSubmit: "إرسال الرسالة",
+  },
+  th: {
+    navHome: "หน้าแรก", navCollections: "เลือกตามความต้องการ", navProducts: "สินค้า", navPromise: "คำมั่นของเรา", navGuides: "คู่มือ", navContact: "ติดต่อ",
+    productNavBeginners: "ชุดเริ่มต้น", productNavSolo: "ดูแลตนเอง", productNavCouples: "สำหรับคู่รัก", productNavCare: "ของใช้ดูแล",
+    heroTitle: "ผลิตภัณฑ์ดูแลความใกล้ชิดสำหรับผู้ใหญ่ที่มั่นใจและอยากรู้อยากลอง", heroPrimary: "ดูคอลเลกชัน", finderOneTitle: "ฉันเป็นมือใหม่", finderTwoTitle: "สำหรับคู่รัก", finderThreeTitle: "ของใช้ดูแล",
+    collectionsTitle: "เลือกตามความต้องการ ไม่ใช่ชื่อสินค้าที่สับสน", collectionOneTitle: "ค้นพบครั้งแรก", collectionTwoTitle: "ความสุขส่วนตัว", collectionThreeTitle: "คู่รักและการเชื่อมโยง", collectionFourTitle: "การดูแลและอุปกรณ์",
+    contactTitle: "ถามแบบส่วนตัว", fieldName: "ชื่อเล่น", fieldContact: "ช่องทางติดต่อเพิ่มเติม", fieldMessage: "คำถามของคุณ", fieldSubmit: "ส่งข้อความ",
+  },
+  vi: {
+    navHome: "Trang chủ", navCollections: "Mua theo nhu cầu", navProducts: "Sản phẩm", navPromise: "Cam kết", navGuides: "Hướng dẫn", navContact: "Liên hệ",
+    productNavBeginners: "Bộ cho người mới", productNavSolo: "Wellness cá nhân", productNavCouples: "Cho cặp đôi", productNavCare: "Chăm sóc thiết yếu",
+    heroTitle: "Sản phẩm wellness thân mật cho người lớn tò mò và tự tin", heroPrimary: "Xem bộ sưu tập", finderOneTitle: "Tôi là người mới", finderTwoTitle: "Cho cặp đôi", finderThreeTitle: "Chăm sóc thiết yếu",
+    collectionsTitle: "Mua theo nhu cầu, không theo tên sản phẩm khó hiểu", collectionOneTitle: "Khám phá đầu tiên", collectionTwoTitle: "Niềm vui cá nhân", collectionThreeTitle: "Cặp đôi và kết nối", collectionFourTitle: "Chăm sóc và phụ kiện",
+    contactTitle: "Hỏi riêng tư", fieldName: "Biệt danh", fieldContact: "Liên hệ tùy chọn", fieldMessage: "Câu hỏi của bạn", fieldSubmit: "Gửi tin nhắn",
+  },
+  tr: {
+    navHome: "Ana sayfa", navCollections: "İhtiyaca göre alışveriş", navProducts: "Ürünler", navPromise: "Sözümüz", navGuides: "Rehberler", navContact: "İletişim",
+    productNavBeginners: "Başlangıç setleri", productNavSolo: "Solo wellness", productNavCouples: "Çiftler için", productNavCare: "Bakım ürünleri",
+    heroTitle: "Meraklı ve kendine güvenen yetişkinler için intim wellness ürünleri", heroPrimary: "Koleksiyonları keşfet", finderOneTitle: "Burada yeniyim", finderTwoTitle: "Çiftler için", finderThreeTitle: "Bakım ürünleri",
+    collectionsTitle: "Kafa karıştıran isimler yerine ihtiyaca göre alışveriş", collectionOneTitle: "İlk keşif", collectionTwoTitle: "Kişisel haz", collectionThreeTitle: "Çiftler ve bağlantı", collectionFourTitle: "Bakım ve aksesuarlar",
+    contactTitle: "Gizlice sor", fieldName: "Takma ad", fieldContact: "İsteğe bağlı iletişim", fieldMessage: "Sorunuz", fieldSubmit: "Mesaj gönder",
+  },
+  nl: {
+    navHome: "Home", navCollections: "Shop op behoefte", navProducts: "Producten", navPromise: "Onze belofte", navGuides: "Gidsen", navContact: "Contact",
+    productNavBeginners: "Starterkits", productNavSolo: "Solo wellness", productNavCouples: "Voor koppels", productNavCare: "Verzorging",
+    heroTitle: "Intieme wellness essentials voor nieuwsgierige, zelfverzekerde volwassenen", heroPrimary: "Collecties bekijken", finderOneTitle: "Ik ben nieuw", finderTwoTitle: "Voor koppels", finderThreeTitle: "Verzorging",
+    collectionsTitle: "Shop op behoefte, niet op verwarrende productnamen", collectionOneTitle: "Eerste ontdekking", collectionTwoTitle: "Persoonlijk plezier", collectionThreeTitle: "Koppels en verbinding", collectionFourTitle: "Verzorging en accessoires",
+    contactTitle: "Vraag privé", fieldName: "Bijnaam", fieldContact: "Optioneel contact", fieldMessage: "Je vraag", fieldSubmit: "Bericht sturen",
+  },
+  id: {
+    navHome: "Beranda", navCollections: "Belanja sesuai kebutuhan", navProducts: "Produk", navPromise: "Janji kami", navGuides: "Panduan", navContact: "Kontak",
+    productNavBeginners: "Kit pemula", productNavSolo: "Wellness solo", productNavCouples: "Untuk pasangan", productNavCare: "Perawatan",
+    heroTitle: "Produk wellness intim untuk orang dewasa yang penasaran dan percaya diri", heroPrimary: "Jelajahi koleksi", finderOneTitle: "Saya baru di sini", finderTwoTitle: "Untuk pasangan", finderThreeTitle: "Perawatan penting",
+    collectionsTitle: "Belanja berdasarkan kebutuhan, bukan nama produk yang membingungkan", collectionOneTitle: "Penemuan pertama", collectionTwoTitle: "Kesenangan pribadi", collectionThreeTitle: "Pasangan dan koneksi", collectionFourTitle: "Perawatan dan aksesori",
+    contactTitle: "Bertanya secara pribadi", fieldName: "Nama panggilan", fieldContact: "Kontak opsional", fieldMessage: "Pertanyaan Anda", fieldSubmit: "Kirim pesan",
+  },
+  he: {
+    navHome: "בית", navCollections: "קנייה לפי צורך", navProducts: "מוצרים", navPromise: "ההבטחה שלנו", navGuides: "מדריכים", navContact: "צור קשר",
+    productNavBeginners: "ערכות למתחילים", productNavSolo: "וולנס אישי", productNavCouples: "לזוגות", productNavCare: "טיפוח חיוני",
+    heroTitle: "מוצרי וולנס אינטימי למבוגרים סקרנים ובטוחים", heroPrimary: "לעיון בקולקציות", finderOneTitle: "אני חדש/ה כאן", finderTwoTitle: "לזוגות", finderThreeTitle: "טיפוח חיוני",
+    collectionsTitle: "קנו לפי צורך, לא לפי שמות מבלבלים", collectionOneTitle: "גילוי ראשון", collectionTwoTitle: "עונג אישי", collectionThreeTitle: "זוגות וחיבור", collectionFourTitle: "טיפוח ואביזרים",
+    contactTitle: "שאלה פרטית", fieldName: "כינוי", fieldContact: "פרטי קשר אופציונליים", fieldMessage: "השאלה שלך", fieldSubmit: "שליחת הודעה",
+  },
+  hi: {
+    navHome: "होम", navCollections: "ज़रूरत के अनुसार खरीदें", navProducts: "उत्पाद", navPromise: "हमारा वादा", navGuides: "गाइड", navContact: "संपर्क",
+    productNavBeginners: "शुरुआती किट", productNavSolo: "सोलो वेलनेस", productNavCouples: "कपल्स के लिए", productNavCare: "केयर आवश्यक",
+    heroTitle: "जिज्ञासु और आत्मविश्वासी वयस्कों के लिए इंटिमेट वेलनेस उत्पाद", heroPrimary: "कलेक्शन देखें", finderOneTitle: "मैं नया/नई हूँ", finderTwoTitle: "कपल्स के लिए", finderThreeTitle: "केयर आवश्यक",
+    collectionsTitle: "भ्रमित नामों से नहीं, ज़रूरत से खरीदें", collectionOneTitle: "पहली खोज", collectionTwoTitle: "व्यक्तिगत आनंद", collectionThreeTitle: "कपल्स और जुड़ाव", collectionFourTitle: "केयर और एक्सेसरीज़",
+    contactTitle: "निजी रूप से पूछें", fieldName: "निकनेम", fieldContact: "वैकल्पिक संपर्क", fieldMessage: "आपका प्रश्न", fieldSubmit: "संदेश भेजें",
+  },
+};
+
+Object.assign(translations, sharedLocalizedTranslations);
+
 const languageOptions = {
-  de: { label: "Deutsch", short: "DE", htmlLang: "de" },
-  pt: { label: "Português", short: "PT", htmlLang: "pt" },
-  es: { label: "Español", short: "ES", htmlLang: "es" },
-  fr: { label: "Français", short: "FR", htmlLang: "fr" },
-  it: { label: "Italiano", short: "IT", htmlLang: "it" },
-  ru: { label: "Русский", short: "RU", htmlLang: "ru" },
-  ko: { label: "한국어", short: "KO", htmlLang: "ko" },
-  ja: { label: "日本語", short: "JA", htmlLang: "ja" },
-  ar: { label: "العربية", short: "AR", htmlLang: "ar" },
-  th: { label: "ภาษาไทย", short: "TH", htmlLang: "th" },
-  vi: { label: "Tiếng Việt", short: "VI", htmlLang: "vi" },
-  tr: { label: "Türkçe", short: "TR", htmlLang: "tr" },
-  nl: { label: "Nederlands", short: "NL", htmlLang: "nl" },
-  id: { label: "Indonesian", short: "ID", htmlLang: "id" },
-  he: { label: "עברית", short: "HE", htmlLang: "he" },
-  hi: { label: "हिन्दी", short: "HI", htmlLang: "hi" },
-  en: { label: "English", short: "EN", htmlLang: "en" },
-  zh: { label: "中文", short: "ZH", htmlLang: "zh-CN" },
+  de: { label: "Deutsch", short: "DE", htmlLang: "de", translateLang: "de" },
+  pt: { label: "Portugu\u00eas", short: "PT", htmlLang: "pt", translateLang: "pt" },
+  es: { label: "Espa\u00f1ol", short: "ES", htmlLang: "es", translateLang: "es" },
+  fr: { label: "Fran\u00e7ais", short: "FR", htmlLang: "fr", translateLang: "fr" },
+  it: { label: "Italiano", short: "IT", htmlLang: "it", translateLang: "it" },
+  ru: { label: "\u0420\u0443\u0441\u0441\u043a\u0438\u0439", short: "RU", htmlLang: "ru", translateLang: "ru" },
+  ko: { label: "\ud55c\uad6d\uc5b4", short: "KO", htmlLang: "ko", translateLang: "ko" },
+  ja: { label: "\u65e5\u672c\u8a9e", short: "JA", htmlLang: "ja", translateLang: "ja" },
+  ar: { label: "\u0627\u0644\u0639\u0631\u0628\u064a\u0629", short: "AR", htmlLang: "ar", translateLang: "ar" },
+  th: { label: "\u0e20\u0e32\u0e29\u0e32\u0e44\u0e17\u0e22", short: "TH", htmlLang: "th", translateLang: "th" },
+  vi: { label: "Ti\u1ebfng Vi\u1ec7t", short: "VI", htmlLang: "vi", translateLang: "vi" },
+  tr: { label: "T\u00fcrk\u00e7e", short: "TR", htmlLang: "tr", translateLang: "tr" },
+  nl: { label: "Nederlands", short: "NL", htmlLang: "nl", translateLang: "nl" },
+  id: { label: "Indonesian", short: "ID", htmlLang: "id", translateLang: "id" },
+  he: { label: "\u05e2\u05d1\u05e8\u05d9\u05ea", short: "HE", htmlLang: "he", translateLang: "iw" },
+  hi: { label: "\u0939\u093f\u0928\u094d\u0926\u0940", short: "HI", htmlLang: "hi", translateLang: "hi" },
+  en: { label: "English", short: "EN", htmlLang: "en", translateLang: "en" },
+  zh: { label: "\u4e2d\u6587", short: "ZH", htmlLang: "zh-CN", translateLang: "zh-CN" },
 };
 
 const languageKey = "aylamuse-language";
 const storageKey = "aylamuse-private-messages";
 const ipLanguageEndpoint = "https://ipapi.co/json/";
+const translationCachePrefix = "aylamuse-translations-v2-";
+const translationEndpoint = "https://translate.googleapis.com/translate_a/single";
 const messageForm = document.querySelector("[data-message-form]");
 const messageBoard = document.querySelector("[data-message-board]");
 const siteHeader = document.querySelector(".site-header");
 const menuToggle = document.querySelector("[data-menu-toggle]");
+let translationRunId = 0;
 
 const getStoredLanguage = () => localStorage.getItem(languageKey);
 const getCurrentLanguage = () => getStoredLanguage() || document.documentElement.dataset.language || "en";
 const isContactPage = () => window.location.pathname.includes("contact");
 const getContentLanguage = (language) => (translations[language] ? language : "en");
+const needsRemoteTranslation = (language) => !translations[language];
 
 const countryLanguageMap = {
   DE: "de",
@@ -371,8 +767,9 @@ const applyPreferredLanguage = async () => {
 };
 
 const applyLanguage = (language) => {
-  const dictionary = translations[getContentLanguage(language)] || translations.en;
+  const dictionary = { ...translations.en, ...(translations[getContentLanguage(language)] || {}) };
   const languageMeta = languageOptions[language] || languageOptions.en;
+  const runId = ++translationRunId;
   document.documentElement.dataset.language = language;
   document.documentElement.lang = languageMeta.htmlLang;
   document.documentElement.dir = "ltr";
@@ -400,6 +797,129 @@ const applyLanguage = (language) => {
     button.classList.toggle("active", isActive);
     button.setAttribute("aria-pressed", String(isActive));
   });
+
+  if (needsRemoteTranslation(language)) {
+    applyRemoteTranslation(language, runId);
+  }
+};
+
+const getPageTranslationKeys = () => {
+  const keys = new Set();
+  document.querySelectorAll("[data-i18n]").forEach((element) => keys.add(element.dataset.i18n));
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
+    keys.add(element.dataset.i18nPlaceholder);
+  });
+  return [...keys].filter((key) => translations.en[key]);
+};
+
+const getTranslationCache = (language) => {
+  try {
+    return JSON.parse(localStorage.getItem(`${translationCachePrefix}${language}`) || "{}");
+  } catch {
+    return {};
+  }
+};
+
+const saveTranslationCache = (language, cache) => {
+  localStorage.setItem(`${translationCachePrefix}${language}`, JSON.stringify(cache));
+};
+
+const translateBatch = async (texts, targetLanguage) => {
+  const target = languageOptions[targetLanguage]?.translateLang || targetLanguage;
+  const translateOne = async (text) => {
+    const params = new URLSearchParams({
+      client: "gtx",
+      sl: "en",
+      tl: target,
+      dt: "t",
+      q: text,
+    });
+    const response = await fetch(`${translationEndpoint}?${params.toString()}`);
+    if (!response.ok) {
+      throw new Error("Translation request failed");
+    }
+    const payload = await response.json();
+    return payload?.[0]?.map((part) => part?.[0] || "").join("") || text;
+  };
+
+  const delimiter = "\n<<<AYLAMUSE_SPLIT>>>\n";
+  const params = new URLSearchParams({
+    client: "gtx",
+    sl: "en",
+    tl: target,
+    dt: "t",
+    q: texts.join(delimiter),
+  });
+
+  const response = await fetch(`${translationEndpoint}?${params.toString()}`);
+  if (!response.ok) {
+    throw new Error("Translation request failed");
+  }
+
+  const payload = await response.json();
+  const translatedText = payload?.[0]?.map((part) => part?.[0] || "").join("") || "";
+  const translatedParts = translatedText.split("<<<AYLAMUSE_SPLIT>>>");
+
+  if (translatedParts.length !== texts.length) {
+    return Promise.all(texts.map((text) => translateOne(text)));
+  }
+
+  return translatedParts.map((part) => part.trim());
+};
+
+const applyTranslatedDictionary = (dictionary) => {
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const value = dictionary[element.dataset.i18n];
+    if (value) {
+      element.textContent = value;
+    }
+  });
+
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
+    const value = dictionary[element.dataset.i18nPlaceholder];
+    if (value) {
+      element.setAttribute("placeholder", value);
+    }
+  });
+};
+
+const applyRemoteTranslation = async (language, runId) => {
+  const keys = getPageTranslationKeys();
+  const cached = getTranslationCache(language);
+
+  if (keys.every((key) => cached[key])) {
+    if (runId === translationRunId && getCurrentLanguage() === language) {
+      applyTranslatedDictionary(cached);
+    }
+    return;
+  }
+
+  try {
+    const missingKeys = keys.filter((key) => !cached[key]);
+    const batchSize = 16;
+
+    for (let index = 0; index < missingKeys.length; index += batchSize) {
+      const batchKeys = missingKeys.slice(index, index + batchSize);
+      const translatedValues = await translateBatch(
+        batchKeys.map((key) => translations.en[key]),
+        language
+      );
+
+      batchKeys.forEach((key, valueIndex) => {
+        cached[key] = translatedValues[valueIndex] || translations.en[key];
+      });
+
+      saveTranslationCache(language, cached);
+
+      if (runId === translationRunId && getCurrentLanguage() === language) {
+        applyTranslatedDictionary(cached);
+      }
+    }
+  } catch {
+    if (runId === translationRunId && getCurrentLanguage() === language) {
+      applyTranslatedDictionary(cached);
+    }
+  }
 };
 
 const closeMobileMenu = () => {
@@ -441,7 +961,7 @@ const renderMessages = () => {
     return;
   }
 
-  const dictionary = translations[getContentLanguage(getCurrentLanguage())] || translations.en;
+  const dictionary = { ...translations.en, ...(translations[getContentLanguage(getCurrentLanguage())] || {}) };
   const messages = loadMessages();
 
   if (!messages.length) {
