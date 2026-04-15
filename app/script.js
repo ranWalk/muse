@@ -470,6 +470,7 @@ document.querySelectorAll("[data-lang-switch]").forEach((button) => {
     renderMessages();
     document.querySelector(".language-picker")?.classList.remove("open");
     document.querySelector("[data-language-current]")?.setAttribute("aria-expanded", "false");
+    document.activeElement?.blur();
   });
 });
 
