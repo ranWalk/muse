@@ -282,6 +282,8 @@ const storageKey = "aylamuse-private-messages";
 const ipLanguageEndpoint = "https://ipapi.co/json/";
 const messageForm = document.querySelector("[data-message-form]");
 const messageBoard = document.querySelector("[data-message-board]");
+const siteHeader = document.querySelector(".site-header");
+const menuToggle = document.querySelector("[data-menu-toggle]");
 
 const getStoredLanguage = () => localStorage.getItem(languageKey);
 const getCurrentLanguage = () => getStoredLanguage() || document.documentElement.dataset.language || "en";
@@ -400,6 +402,11 @@ const applyLanguage = (language) => {
   });
 };
 
+const closeMobileMenu = () => {
+  siteHeader?.classList.remove("menu-open");
+  menuToggle?.setAttribute("aria-expanded", "false");
+};
+
 const escapeHtml = (value) =>
   value
     .replaceAll("&", "&amp;")
@@ -470,8 +477,15 @@ document.querySelectorAll("[data-lang-switch]").forEach((button) => {
     renderMessages();
     document.querySelector(".language-picker")?.classList.remove("open");
     document.querySelector("[data-language-current]")?.setAttribute("aria-expanded", "false");
+    closeMobileMenu();
     document.activeElement?.blur();
   });
+});
+
+menuToggle?.addEventListener("click", () => {
+  const shouldOpen = !siteHeader?.classList.contains("menu-open");
+  siteHeader?.classList.toggle("menu-open", shouldOpen);
+  menuToggle.setAttribute("aria-expanded", String(shouldOpen));
 });
 
 document.querySelector("[data-language-current]")?.addEventListener("click", () => {
@@ -500,8 +514,13 @@ document.querySelectorAll(".nav-dropdown").forEach((dropdown) => {
     link.addEventListener("click", () => {
       dropdown.classList.remove("open");
       trigger?.setAttribute("aria-expanded", "false");
+      closeMobileMenu();
     });
   });
+});
+
+document.querySelectorAll(".site-nav > .nav-link").forEach((link) => {
+  link.addEventListener("click", closeMobileMenu);
 });
 
 document.addEventListener("click", (event) => {
