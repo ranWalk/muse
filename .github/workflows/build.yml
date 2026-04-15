@@ -20,6 +20,8 @@ jobs:
     permissions:
       contents: read
       packages: write
+    env:
+      MUSE_APP_DEPLOY_TOKEN: ${{ secrets.MUSE_APP_DEPLOY_TOKEN }}
 
     steps:
       - name: Checkout repository
@@ -44,3 +46,13 @@ jobs:
           tags: |
             ${{ env.IMAGE_NAME }}:latest
             ${{ env.IMAGE_NAME }}:${{ github.sha }}
+
+      - name: Trigger deployment repository
+        if: ${{ github.ref == 'refs/heads/main' && env.MUSE_APP_DEPLOY_TOKEN != '' }}
+        env:
+          GH_TOKEN: ${{ env.MUSE_APP_DEPLOY_TOKEN }}
+        run: |
+          gh api repos/ranWalk/muse-app/dispatches \
+            --method POST \
+            --field event_type=muse_image_published \
+            --field client_payload[image]="${IMAGE_NAME}:${GITHUB_SHA}"

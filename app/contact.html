@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moonveil | Private Contact</title>
+  <title>aylamuse | Private Contact</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,10 +16,10 @@
   </div>
 
   <header class="site-header">
-    <a class="brand" href="./index.html" aria-label="Moonveil home">
-      <span class="brand-mark">M</span>
+    <a class="brand" href="./index.html" aria-label="aylamuse home">
+      <span class="brand-mark">A</span>
       <span class="brand-text">
-        <strong>Moonveil</strong>
+        <strong>aylamuse</strong>
         <small>Intimate Wellness</small>
       </span>
     </a>
@@ -27,14 +27,45 @@
     <nav class="site-nav" aria-label="Main navigation">
       <a class="nav-link" href="./index.html" data-i18n="navHome">Home</a>
       <a class="nav-link" href="./index.html#collections" data-i18n="navCollections">Shop by Need</a>
+      <div class="nav-dropdown">
+        <button class="nav-link nav-trigger" type="button" data-i18n="navProducts" aria-expanded="false">Products</button>
+        <div class="product-menu" aria-label="Product navigation">
+          <a href="./index.html#product-beginners" data-i18n="productNavBeginners">Beginner Kits</a>
+          <a href="./index.html#product-solo" data-i18n="productNavSolo">Solo Wellness</a>
+          <a href="./index.html#product-couples" data-i18n="productNavCouples">Couples Play</a>
+          <a href="./index.html#product-care" data-i18n="productNavCare">Care Essentials</a>
+        </div>
+      </div>
       <a class="nav-link" href="./index.html#promise" data-i18n="navPromise">Our Promise</a>
       <a class="nav-link" href="./index.html#journal" data-i18n="navGuides">Guides</a>
       <a class="nav-link active" href="./contact.html" data-i18n="navContact">Contact</a>
     </nav>
 
-    <div class="language-switch" aria-label="Language switcher">
-      <button type="button" data-lang-switch="en">EN</button>
-      <button type="button" data-lang-switch="zh">中文</button>
+    <div class="language-picker" aria-label="Language selector">
+      <button class="language-current" type="button" data-language-current aria-expanded="false">
+        <span data-language-flag>EN</span>
+        <strong data-language-label>English</strong>
+      </button>
+      <div class="language-menu" data-language-menu>
+        <button type="button" data-lang-switch="de"><span>DE</span><strong>Deutsch</strong></button>
+        <button type="button" data-lang-switch="pt"><span>PT</span><strong>Portugu&ecirc;s</strong></button>
+        <button type="button" data-lang-switch="es"><span>ES</span><strong>Espa&ntilde;ol</strong></button>
+        <button type="button" data-lang-switch="fr"><span>FR</span><strong>Fran&ccedil;ais</strong></button>
+        <button type="button" data-lang-switch="it"><span>IT</span><strong>Italiano</strong></button>
+        <button type="button" data-lang-switch="ru"><span>RU</span><strong>&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</strong></button>
+        <button type="button" data-lang-switch="ko"><span>KO</span><strong>&#54620;&#44397;&#50612;</strong></button>
+        <button type="button" data-lang-switch="ja"><span>JA</span><strong>&#26085;&#26412;&#35486;</strong></button>
+        <button type="button" data-lang-switch="ar"><span>AR</span><strong>&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</strong></button>
+        <button type="button" data-lang-switch="th"><span>TH</span><strong>&#3616;&#3634;&#3625;&#3634;&#3652;&#3607;&#3618;</strong></button>
+        <button type="button" data-lang-switch="vi"><span>VI</span><strong>Ti&#7871;ng Vi&#7879;t</strong></button>
+        <button type="button" data-lang-switch="tr"><span>TR</span><strong>T&uuml;rk&ccedil;e</strong></button>
+        <button type="button" data-lang-switch="nl"><span>NL</span><strong>Nederlands</strong></button>
+        <button type="button" data-lang-switch="id"><span>ID</span><strong>Indonesian</strong></button>
+        <button type="button" data-lang-switch="he"><span>HE</span><strong>&#1506;&#1489;&#1512;&#1497;&#1514;</strong></button>
+        <button type="button" data-lang-switch="hi"><span>HI</span><strong>&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;</strong></button>
+        <button type="button" data-lang-switch="en"><span>EN</span><strong>English</strong></button>
+        <button type="button" data-lang-switch="zh"><span>ZH</span><strong>&#20013;&#25991;</strong></button>
+      </div>
     </div>
   </header>
 
