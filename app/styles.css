@@ -434,6 +434,16 @@ main {
   text-transform: uppercase;
 }
 
+.brand-slogan {
+  margin: 0 0 18px;
+  color: var(--rose-deep);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.28rem, 2vw, 1.72rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
 h1,
 h2,
 h3,

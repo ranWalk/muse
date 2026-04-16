@@ -14,7 +14,7 @@ const translations = {
     productNavSolo: "Solo Wellness",
     productNavCouples: "Couples Play",
     productNavCare: "Care Essentials",
-    heroEyebrow: "Pleasure, Softly Designed",
+    heroEyebrow: "AylaMuse ·For the muse in you",
     heroTitle: "Intimate wellness essentials for curious, confident adults",
     heroText:
       "A direct-to-consumer independent store concept for global customers. No product images are used yet, so the page focuses on trust, privacy, education, and clear pathways into the right collection.",
