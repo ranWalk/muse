@@ -265,6 +265,8 @@ main {
   position: relative;
   justify-self: end;
   min-width: max-content;
+  overflow: visible;
+  z-index: 41;
 }
 
 .language-current {
@@ -305,27 +307,35 @@ main {
 
 .language-current::after {
   content: "";
-  display: block;
+  display: inline-block;
   width: 9px;
   height: 9px;
-  margin: -4px 0 0;
   border-right: 2px solid currentColor;
   border-bottom: 2px solid currentColor;
   transform: rotate(45deg);
   transform-origin: 50% 50%;
+  transition: transform 0.18s ease;
+  vertical-align: middle;
+  margin-left: 6px;
+  margin-top: -1px;
+}
+
+.language-picker.open .language-current::after {
+  transform: rotate(225deg);
 }
 
 .language-menu {
-  position: absolute;
-  top: calc(100% + 12px);
-  right: 0;
-  z-index: 40;
+  position: fixed;
+  top: auto;
+  bottom: 10px;
+  left: 50%;
+  z-index: 1000;
   display: grid;
   grid-template-columns: repeat(3, minmax(112px, 1fr));
   gap: 10px;
-  width: min(520px, calc(100vw - 36px));
+  width: min(520px, calc(100vw - 20px));
   max-height: min(520px, calc(100vh - 170px));
-  overflow: auto;
+  overflow-y: auto;
   padding: 16px;
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 22px;
@@ -333,14 +343,36 @@ main {
   box-shadow: 0 22px 60px rgba(63, 49, 86, 0.2);
   opacity: 0;
   pointer-events: none;
-  transform: translateY(-6px);
+  transform: translateY(-6px) translateX(-50%);
   transition: opacity 0.18s ease, transform 0.18s ease;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(63, 49, 86, 0.35) rgba(255, 250, 244, 0.98);
+}
+
+.language-menu::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.language-menu::-webkit-scrollbar-track {
+  background: rgba(255, 250, 244, 0.98);
+  border-radius: 999px;
+}
+
+.language-menu::-webkit-scrollbar-thumb {
+  background: rgba(63, 49, 86, 0.22);
+  border-radius: 999px;
+  border: 2px solid rgba(255, 250, 244, 0.98);
+}
+
+.language-menu::-webkit-scrollbar-thumb:hover {
+  background: rgba(63, 49, 86, 0.34);
 }
 
 .language-picker.open .language-menu {
   opacity: 1;
   pointer-events: auto;
-  transform: translateY(0);
+  transform: translateY(0) translateX(-50%);
 }
 
 .language-menu button {
@@ -1501,11 +1533,18 @@ body:not(.home-page) .mosaic-grid a:hover {
 
   .menu-toggle {
     display: grid;
+    width: 38px;
+    height: 38px;
+  }
+
+  .menu-toggle span {
+    width: 14px;
+    height: 1.5px;
   }
 
   .brand-logo {
-    width: min(128px, 42vw);
-    height: 38px;
+    width: min(150px, 50vw);
+    height: 45px;
   }
 
   .nav-panel {
@@ -1530,9 +1569,33 @@ body:not(.home-page) .mosaic-grid a:hover {
   }
 
   .language-menu {
-    right: auto;
-    left: 0;
+    position: fixed;
+    top: auto;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    transform: translateY(6px) translateX(0);
     grid-template-columns: repeat(2, minmax(108px, 1fr));
+    gap: 10px;
+    height: 280px;
+    max-height: 280px;
+    width: calc(100vw - 20px);
+    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    border-radius: 22px;
+    background: rgba(255, 250, 244, 0.98);
+    box-shadow: 0 22px 60px rgba(63, 49, 86, 0.2);
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s ease, transform 0.18s ease;
+    z-index: 1000;
+  }
+
+  .language-picker.open .language-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) translateX(0);
   }
 
   main {

@@ -1150,6 +1150,7 @@ document.querySelectorAll("[data-lang-switch]").forEach((button) => {
     renderMessages();
     document.querySelector(".language-picker")?.classList.remove("open");
     document.querySelector("[data-language-current]")?.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
     closeMobileMenu();
     document.activeElement?.blur();
   });
@@ -1180,6 +1181,12 @@ document.querySelector("[data-language-current]")?.addEventListener("click", () 
   const shouldOpen = !picker.classList.contains("open");
   picker.classList.toggle("open", shouldOpen);
   document.querySelector("[data-language-current]")?.setAttribute("aria-expanded", String(shouldOpen));
+  
+  if (shouldOpen) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
 });
 
 document.querySelectorAll(".nav-dropdown").forEach((dropdown) => {
@@ -1221,6 +1228,7 @@ document.addEventListener("click", (event) => {
   if (!event.target.closest(".language-picker")) {
     document.querySelector(".language-picker")?.classList.remove("open");
     document.querySelector("[data-language-current]")?.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
   }
 });
 
