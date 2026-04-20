@@ -648,6 +648,89 @@ const sharedLocalizedTranslations = {
 
 Object.assign(translations, sharedLocalizedTranslations);
 
+Object.assign(translations.en, {
+  homeHeroKicker: "20+ thoughtful essentials",
+  homeHeroTitle: "Private care for curious, confident adults",
+  homeHeroCta: "View New Arrivals",
+  homeLanguageKicker: "Multi-language",
+  homeLanguageTitle: "Global-friendly shopping, private by default",
+  homeNavigationKicker: "Classified Navigation",
+  homeNavigationTitle: "Shop by the kind of support you want",
+  homeAboutKicker: "About Us",
+  homeAboutTitle: "Designed around calm browsing and clear choices",
+  homeAboutText: "AylaMuse keeps the shopping path simple: privacy first, body-safe guidance, beginner-friendly language, and fast access to a private recommendation.",
+  homeBandKicker: "AylaMuse Collection",
+  homeBandTitle: "Soft launch essentials for every comfort level",
+  homeCertificateKicker: "Certificate Presentation",
+  homeCertificateTitle: "Trust signals stay visible before product decisions",
+  homeFairKicker: "Canton Fair",
+  homeFairTitle: "Launch-ready visual stories",
+  homeBestKicker: "Best Sellers",
+  homeBestTitle: "Popular directions to explore",
+  homeFrontKicker: "Front Care Essential",
+  homeFrontTitle: "Supportive picks for first-time shoppers",
+  homeRearKicker: "Care Routine",
+  homeRearTitle: "Simple aftercare, storage, and cleaning support",
+  homeContactWay: "Contact Way",
+  homePrivateMessage: "Private message",
+  homeBackTop: "Back to top",
+  cardBeginnerTitle: "Beginner Kits",
+  cardBeginnerText: "Gentle first steps",
+  cardSoloTitle: "Solo Wellness",
+  cardSoloText: "Quiet personal rituals",
+  cardCouplesTitle: "Couples Play",
+  cardCouplesText: "Shared discovery",
+  cardCareTitle: "Care Essentials",
+  cardCareText: "Clean, store, reset",
+  cardFirstDiscovery: "First-Time Discovery",
+  cardPersonalPleasure: "Personal Pleasure",
+  cardCouplesConnection: "Couples & Connection",
+  cardCareAccessories: "Care & Accessories",
+  cardQuietCare: "Quiet Care Set",
+  cardPrivateStarter: "Private Starter Pack",
+  serviceAdviceTitle: "Product Advice",
+  serviceAdviceText: "Private recommendations",
+  serviceMaterialTitle: "Material Focus",
+  serviceMaterialText: "Plain-language care guidance",
+  serviceAccessTitle: "Easy Access",
+  serviceAccessText: "Need-based navigation",
+  collectionsPageKicker: "Shop by Need",
+  collectionsPageTitle: "Start with what you want to feel.",
+  collectionsPageText: "Choose a path by comfort level, relationship context, or care routine. This page is separate from the homepage, so category browsing can grow into a full shopping flow.",
+  collectionsViewProducts: "View Products",
+  collectionsNewTitle: "New to this",
+  collectionsNewText: "Gentle recommendations, simple care steps, and less decision pressure.",
+  collectionsSoloTitle: "Solo wellness",
+  collectionsSoloText: "Comfort-first personal rituals with quiet use and easy cleaning in mind.",
+  collectionsSharedTitle: "Shared discovery",
+  collectionsSharedText: "Conversation-led options for couples who want something playful and respectful.",
+  productsPageKicker: "Products",
+  productsPageTitle: "Clear categories before detailed SKUs.",
+  productsPageText: "These product pages are ready to receive real item photos, prices, and buy links when the catalog is finalized.",
+  productsBeginnerText: "Approachable first-step options with gentle intensity and simple cleaning.",
+  productsSoloText: "Personal-care essentials designed for quiet use, comfort, and confidence.",
+  productsCouplesText: "Shared discovery picks that make conversation and consent feel natural.",
+  productsCareText: "Cleaning, storage, lubricants, and aftercare support for better routines.",
+  promisePageKicker: "Our Promise",
+  promisePageTitle: "Privacy, clarity, and calm support.",
+  promisePageText: "AylaMuse is shaped around respectful adult wellness: discreet packaging expectations, clear product language, and beginner-friendly support.",
+  promisePrivacy: "Privacy first. Browsing, messaging, and packaging language stays discreet.",
+  promiseMaterial: "Material clarity. Product copy should make materials, cleaning, and usage easy to understand.",
+  promiseGuidance: "Gentle guidance. Recommendations begin with comfort level and boundaries.",
+  guidesPageKicker: "Guides",
+  guidesPageTitle: "Helpful reading before choosing.",
+  guidesPageText: "Keep education separate from the homepage so guides can become proper articles, FAQs, and buyer notes.",
+  guideOneLabel: "Guide 01",
+  guideTwoLabel: "Guide 02",
+  guideThreeLabel: "Guide 03",
+  guideOneHeading: "What should first-time shoppers look for?",
+  guideOneBody: "Start with material safety, cleaning effort, noise level, intensity, and comfort with the use case.",
+  guideTwoHeading: "How do couples discuss intimate products?",
+  guideTwoBody: "Begin with feelings, boundaries, curiosity, and consent before comparing specific products.",
+  guideThreeHeading: "How should products be cleaned and stored?",
+  guideThreeBody: "Follow the product material guidance, clean before and after use, dry fully, and store separately.",
+});
+
 const languageOptions = {
   de: { label: "Deutsch", short: "DE", htmlLang: "de", translateLang: "de" },
   pt: { label: "Portugu\u00eas", short: "PT", htmlLang: "pt", translateLang: "pt" },
@@ -684,7 +767,15 @@ const getStoredLanguage = () => localStorage.getItem(languageKey);
 const getCurrentLanguage = () => getStoredLanguage() || document.documentElement.dataset.language || "en";
 const isContactPage = () => window.location.pathname.includes("contact");
 const getContentLanguage = (language) => (translations[language] ? language : "en");
-const needsRemoteTranslation = (language) => !translations[language];
+const needsRemoteTranslation = (language) => {
+  if (language === "en") {
+    return false;
+  }
+
+  const localDictionary = translations[getContentLanguage(language)] || {};
+  return !translations[language] || getPageTranslationKeys().some((key) => !localDictionary[key]);
+};
+const hasLanguageControls = () => Boolean(document.querySelector("[data-language-current]"));
 
 const countryLanguageMap = {
   DE: "de",
@@ -752,10 +843,18 @@ const detectLanguageByIp = async () => {
 const applyPreferredLanguage = async () => {
   if (getStoredLanguage()) {
     applyLanguage(getStoredLanguage());
+    document.documentElement.classList.remove("i18n-pending");
+    return;
+  }
+
+  if (!hasLanguageControls()) {
+    document.title = document.body.dataset.pageTitle || document.title;
+    document.documentElement.classList.remove("i18n-pending");
     return;
   }
 
   applyLanguage(getBrowserLanguage());
+  document.documentElement.classList.remove("i18n-pending");
 
   try {
     const detectedLanguage = await detectLanguageByIp();
@@ -773,7 +872,7 @@ const applyLanguage = (language) => {
   document.documentElement.dataset.language = language;
   document.documentElement.lang = languageMeta.htmlLang;
   document.documentElement.dir = "ltr";
-  document.title = isContactPage() ? dictionary.pageTitleContact : dictionary.pageTitleHome;
+  document.title = document.body.dataset.pageTitle || (isContactPage() ? dictionary.pageTitleContact : dictionary.pageTitleHome);
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.dataset.i18n;
@@ -799,8 +898,15 @@ const applyLanguage = (language) => {
   });
 
   if (needsRemoteTranslation(language)) {
-    applyRemoteTranslation(language, runId);
+    applyRemoteTranslation(language, runId).finally(() => {
+      if (runId === translationRunId) {
+        document.documentElement.classList.remove("i18n-pending");
+      }
+    });
+    return;
   }
+
+  document.documentElement.classList.remove("i18n-pending");
 };
 
 const getPageTranslationKeys = () => {
@@ -886,8 +992,10 @@ const applyTranslatedDictionary = (dictionary) => {
 const applyRemoteTranslation = async (language, runId) => {
   const keys = getPageTranslationKeys();
   const cached = getTranslationCache(language);
+  const localDictionary = translations[getContentLanguage(language)] || {};
+  const remoteKeys = keys.filter((key) => !localDictionary[key]);
 
-  if (keys.every((key) => cached[key])) {
+  if (remoteKeys.every((key) => cached[key])) {
     if (runId === translationRunId && getCurrentLanguage() === language) {
       applyTranslatedDictionary(cached);
     }
@@ -895,7 +1003,7 @@ const applyRemoteTranslation = async (language, runId) => {
   }
 
   try {
-    const missingKeys = keys.filter((key) => !cached[key]);
+    const missingKeys = remoteKeys.filter((key) => !cached[key]);
     const batchSize = 16;
 
     for (let index = 0; index < missingKeys.length; index += batchSize) {
@@ -1024,6 +1132,10 @@ document.querySelectorAll(".nav-dropdown").forEach((dropdown) => {
   const links = dropdown.querySelectorAll(".product-menu a");
 
   trigger?.addEventListener("click", () => {
+    if (trigger.matches("a")) {
+      return;
+    }
+
     const shouldOpen = !dropdown.classList.contains("open");
     document.querySelectorAll(".nav-dropdown.open").forEach((item) => item.classList.remove("open"));
     dropdown.classList.toggle("open", shouldOpen);
@@ -1057,7 +1169,14 @@ document.addEventListener("click", (event) => {
   }
 });
 
-applyPreferredLanguage();
+applyPreferredLanguage()
+  .catch(() => {
+    document.documentElement.classList.remove("i18n-pending");
+  });
+
+window.addEventListener("load", () => {
+  document.documentElement.classList.remove("i18n-pending");
+});
 
 if (messageForm) {
   renderMessages();

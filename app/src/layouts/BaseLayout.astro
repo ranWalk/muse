@@ -1,0 +1,29 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+
+const {
+  title = "aylamuse | Intimate Wellness Essentials",
+  bodyClass = "",
+  active = "home",
+  showLanguage = true,
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en" class="i18n-pending">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/aylamuse-logo.svg" />
+  </head>
+  <body class={bodyClass} data-page-title={title}>
+    <div class="announcement">
+      <span data-i18n="announceAge">Adults only, 18+</span>
+      <span data-i18n="announceBenefits">Discreet packaging - Private support - Beginner-friendly guidance</span>
+    </div>
+    <Header active={active} showLanguage={showLanguage} />
+    <slot />
+    <script is:inline src="/script.js"></script>
+  </body>
+</html>

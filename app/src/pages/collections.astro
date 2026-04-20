@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="aylamuse | Shop by Need" active="collections">
+  <main class="page-shell">
+    <section class="page-hero">
+      <div>
+        <p class="eyebrow" data-i18n="collectionsPageKicker">Shop by Need</p>
+        <h1 data-i18n="collectionsPageTitle">Start with what you want to feel.</h1>
+        <p data-i18n="collectionsPageText">Choose a path by comfort level, relationship context, or care routine. This page is separate from the homepage, so category browsing can grow into a full shopping flow.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="/products/" data-i18n="collectionsViewProducts">View Products</a>
+          <a class="button ghost" href="/contact/" data-i18n="matchCta">Ask Privately</a>
+        </div>
+      </div>
+      <div class="page-visual" aria-hidden="true"></div>
+    </section>
+
+    <section class="page-section">
+      <div class="page-grid">
+        <article class="page-card"><h3 data-i18n="collectionsNewTitle">New to this</h3><p data-i18n="collectionsNewText">Gentle recommendations, simple care steps, and less decision pressure.</p></article>
+        <article class="page-card"><h3 data-i18n="collectionsSoloTitle">Solo wellness</h3><p data-i18n="collectionsSoloText">Comfort-first personal rituals with quiet use and easy cleaning in mind.</p></article>
+        <article class="page-card"><h3 data-i18n="collectionsSharedTitle">Shared discovery</h3><p data-i18n="collectionsSharedText">Conversation-led options for couples who want something playful and respectful.</p></article>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

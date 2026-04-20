@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="aylamuse | Guides" active="guides">
+  <main class="page-shell">
+    <section class="page-hero">
+      <div>
+        <p class="eyebrow" data-i18n="guidesPageKicker">Guides</p>
+        <h1 data-i18n="guidesPageTitle">Helpful reading before choosing.</h1>
+        <p data-i18n="guidesPageText">Keep education separate from the homepage so guides can become proper articles, FAQs, and buyer notes.</p>
+      </div>
+      <div class="page-visual" aria-hidden="true"></div>
+    </section>
+    <section class="page-section guide-list">
+      <article><time data-i18n="guideOneLabel">Guide 01</time><h3 data-i18n="guideOneHeading">What should first-time shoppers look for?</h3><p data-i18n="guideOneBody">Start with material safety, cleaning effort, noise level, intensity, and comfort with the use case.</p></article>
+      <article><time data-i18n="guideTwoLabel">Guide 02</time><h3 data-i18n="guideTwoHeading">How do couples discuss intimate products?</h3><p data-i18n="guideTwoBody">Begin with feelings, boundaries, curiosity, and consent before comparing specific products.</p></article>
+      <article><time data-i18n="guideThreeLabel">Guide 03</time><h3 data-i18n="guideThreeHeading">How should products be cleaned and stored?</h3><p data-i18n="guideThreeBody">Follow the product material guidance, clean before and after use, dry fully, and store separately.</p></article>
+    </section>
+  </main>
+</BaseLayout>

@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="aylamuse | Products" active="products">
+  <main class="page-shell">
+    <section class="page-hero">
+      <div>
+        <p class="eyebrow" data-i18n="productsPageKicker">Products</p>
+        <h1 data-i18n="productsPageTitle">Clear categories before detailed SKUs.</h1>
+        <p data-i18n="productsPageText">These product pages are ready to receive real item photos, prices, and buy links when the catalog is finalized.</p>
+      </div>
+      <div class="page-visual" aria-hidden="true"></div>
+    </section>
+
+    <section class="page-section">
+      <div class="page-grid">
+        <article class="category-card" id="beginners"><span class="product-line"></span><h3 data-i18n="cardBeginnerTitle">Beginner Kits</h3><p data-i18n="productsBeginnerText">Approachable first-step options with gentle intensity and simple cleaning.</p><a class="button primary" href="/contact/" data-i18n="matchCta">Ask Privately</a></article>
+        <article class="category-card" id="solo"><span class="product-line thin"></span><h3 data-i18n="cardSoloTitle">Solo Wellness</h3><p data-i18n="productsSoloText">Personal-care essentials designed for quiet use, comfort, and confidence.</p><a class="button primary" href="/contact/" data-i18n="matchCta">Ask Privately</a></article>
+        <article class="category-card" id="couples"><span class="product-line warm"></span><h3 data-i18n="cardCouplesTitle">Couples Play</h3><p data-i18n="productsCouplesText">Shared discovery picks that make conversation and consent feel natural.</p><a class="button primary" href="/contact/" data-i18n="matchCta">Ask Privately</a></article>
+        <article class="category-card" id="care"><span class="product-line compact"></span><h3 data-i18n="cardCareTitle">Care Essentials</h3><p data-i18n="productsCareText">Cleaning, storage, lubricants, and aftercare support for better routines.</p><a class="button primary" href="/contact/" data-i18n="matchCta">Ask Privately</a></article>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
