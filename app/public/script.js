@@ -761,7 +761,10 @@ const messageForm = document.querySelector("[data-message-form]");
 const messageBoard = document.querySelector("[data-message-board]");
 const siteHeader = document.querySelector(".site-header");
 const menuToggle = document.querySelector("[data-menu-toggle]");
+const navAnimationDuration = 200;
+const pageTransitionDuration = 180;
 let translationRunId = 0;
+let navCloseTimer;
 
 const getStoredLanguage = () => localStorage.getItem(languageKey);
 const getCurrentLanguage = () => getStoredLanguage() || document.documentElement.dataset.language || "en";
@@ -843,7 +846,6 @@ const detectLanguageByIp = async () => {
 const applyPreferredLanguage = async () => {
   if (getStoredLanguage()) {
     applyLanguage(getStoredLanguage());
-    document.documentElement.classList.remove("i18n-pending");
     return;
   }
 
@@ -854,15 +856,6 @@ const applyPreferredLanguage = async () => {
   }
 
   applyLanguage(getBrowserLanguage());
-  document.documentElement.classList.remove("i18n-pending");
-
-  try {
-    const detectedLanguage = await detectLanguageByIp();
-    applyLanguage(detectedLanguage);
-    renderMessages();
-  } catch {
-    applyLanguage(getBrowserLanguage());
-  }
 };
 
 const applyLanguage = (language) => {
@@ -1031,8 +1024,60 @@ const applyRemoteTranslation = async (language, runId) => {
 };
 
 const closeMobileMenu = () => {
-  siteHeader?.classList.remove("menu-open");
+  if (!siteHeader?.classList.contains("menu-open")) {
+    return;
+  }
+
+  window.clearTimeout(navCloseTimer);
+  siteHeader.classList.add("nav-closing");
+  document.body.classList.add("nav-closing");
+  document.body.classList.remove("nav-open");
   menuToggle?.setAttribute("aria-expanded", "false");
+
+  navCloseTimer = window.setTimeout(() => {
+    siteHeader.classList.remove("menu-open", "nav-closing");
+    document.body.classList.remove("nav-closing");
+  }, navAnimationDuration);
+};
+
+const shouldAnimateNavigation = (event, link) => {
+  if (
+    event.defaultPrevented ||
+    event.button !== 0 ||
+    event.metaKey ||
+    event.ctrlKey ||
+    event.shiftKey ||
+    event.altKey ||
+    link.target ||
+    link.hasAttribute("download")
+  ) {
+    return false;
+  }
+
+  const nextUrl = new URL(link.href, window.location.href);
+  const currentUrl = new URL(window.location.href);
+
+  if (nextUrl.origin !== currentUrl.origin || nextUrl.protocol !== currentUrl.protocol) {
+    return false;
+  }
+
+  if (nextUrl.pathname === currentUrl.pathname && nextUrl.search === currentUrl.search) {
+    return false;
+  }
+
+  return true;
+};
+
+const animateNavigation = (url) => {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    window.location.href = url.href;
+    return;
+  }
+
+  document.body.classList.add("page-leaving");
+  window.setTimeout(() => {
+    window.location.href = url.href;
+  }, pageTransitionDuration);
 };
 
 const escapeHtml = (value) =>
@@ -1112,8 +1157,18 @@ document.querySelectorAll("[data-lang-switch]").forEach((button) => {
 
 menuToggle?.addEventListener("click", () => {
   const shouldOpen = !siteHeader?.classList.contains("menu-open");
-  siteHeader?.classList.toggle("menu-open", shouldOpen);
-  menuToggle.setAttribute("aria-expanded", String(shouldOpen));
+
+  if (shouldOpen) {
+    window.clearTimeout(navCloseTimer);
+    siteHeader?.classList.remove("nav-closing");
+    document.body.classList.remove("nav-closing");
+    siteHeader?.classList.add("menu-open");
+    document.body.classList.add("nav-open");
+    menuToggle.setAttribute("aria-expanded", "true");
+    return;
+  }
+
+  closeMobileMenu();
 });
 
 document.querySelector("[data-language-current]")?.addEventListener("click", () => {
@@ -1167,6 +1222,22 @@ document.addEventListener("click", (event) => {
     document.querySelector(".language-picker")?.classList.remove("open");
     document.querySelector("[data-language-current]")?.setAttribute("aria-expanded", "false");
   }
+});
+
+document.addEventListener("click", (event) => {
+  const link = event.target.closest("a[href]");
+
+  if (!link || !shouldAnimateNavigation(event, link)) {
+    return;
+  }
+
+  event.preventDefault();
+  closeMobileMenu();
+  animateNavigation(new URL(link.href, window.location.href));
+});
+
+window.addEventListener("pageshow", () => {
+  document.body.classList.remove("page-leaving");
 });
 
 applyPreferredLanguage()

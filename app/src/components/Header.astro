@@ -14,22 +14,24 @@ const isActive = (key) => active === key ? " active" : "";
     <span></span>
   </button>
 
-  <nav class="site-nav" aria-label="Main navigation">
-    <a class={`nav-link${isActive("home")}`} href="/" data-i18n="navHome">Home</a>
-    <a class={`nav-link${isActive("collections")}`} href="/collections/" data-i18n="navCollections">Shop by Need</a>
-    <div class="nav-dropdown">
-      <a class={`nav-link nav-trigger${isActive("products")}`} href="/products/" data-i18n="navProducts" aria-expanded="false">Products</a>
-      <div class="product-menu" aria-label="Product navigation">
-        <a href="/products/#beginners" data-i18n="productNavBeginners">Beginner Kits</a>
-        <a href="/products/#solo" data-i18n="productNavSolo">Solo Wellness</a>
-        <a href="/products/#couples" data-i18n="productNavCouples">Couples Play</a>
-        <a href="/products/#care" data-i18n="productNavCare">Care Essentials</a>
+  <div class="nav-panel">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class={`nav-link${isActive("home")}`} href="/" data-i18n="navHome">Home</a>
+      <a class={`nav-link${isActive("collections")}`} href="/collections/" data-i18n="navCollections">Shop by Need</a>
+      <div class="nav-dropdown">
+        <a class={`nav-link nav-trigger${isActive("products")}`} href="/products/" data-i18n="navProducts" aria-expanded="false">Products</a>
+        <div class="product-menu" aria-label="Product navigation">
+          <a href="/products/#beginners" data-i18n="productNavBeginners">Beginner Kits</a>
+          <a href="/products/#solo" data-i18n="productNavSolo">Solo Wellness</a>
+          <a href="/products/#couples" data-i18n="productNavCouples">Couples Play</a>
+          <a href="/products/#care" data-i18n="productNavCare">Care Essentials</a>
+        </div>
       </div>
-    </div>
-    <a class={`nav-link${isActive("promise")}`} href="/promise/" data-i18n="navPromise">Our Promise</a>
-    <a class={`nav-link${isActive("guides")}`} href="/guides/" data-i18n="navGuides">Guides</a>
-    <a class={`nav-link${isActive("contact")}`} href="/contact/" data-i18n="navContact">Contact</a>
-  </nav>
+      <a class={`nav-link${isActive("promise")}`} href="/promise/" data-i18n="navPromise">Our Promise</a>
+      <a class={`nav-link${isActive("guides")}`} href="/guides/" data-i18n="navGuides">Guides</a>
+      <a class={`nav-link${isActive("contact")}`} href="/contact/" data-i18n="navContact">Contact</a>
+    </nav>
 
-  {showLanguage && <LanguagePicker />}
+    {showLanguage && <LanguagePicker />}
+  </div>
 </header>
