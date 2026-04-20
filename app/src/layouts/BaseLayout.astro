@@ -10,16 +10,11 @@ const {
 } = Astro.props;
 ---
 <!DOCTYPE html>
-<html lang="en" class="i18n-pending">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
-    <style is:inline>
-      html.i18n-pending body {
-        visibility: hidden;
-      }
-    </style>
     <link rel="icon" type="image/svg+xml" href="/assets/aylamuse-logo.svg" />
   </head>
   <body class={bodyClass} data-page-title={title}>
