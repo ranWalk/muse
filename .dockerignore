@@ -1,9 +1,16 @@
 .git
-.github
+.DS_Store
+
+# Local environment files
+.env
+.env.*
+
+# Frontend build artifacts
 app/node_modules
 app/dist
-app/.astro
-app/astro-dev.log
-app/astro-dev.err.log
-DEPLOYMENT.md
-README.md
+
+# Local logs
+*.log
+app/*.log
+dev.err.log
+dev.out.log
