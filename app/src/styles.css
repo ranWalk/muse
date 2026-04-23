@@ -481,12 +481,13 @@ select {
   bottom: 3.6%;
   z-index: 5;
   width: 33%;
-  min-height: 12%;
-  padding: 1.4% 2.8%;
+  min-height: 8.2%;
+  padding: 0.45% 2.8%;
   display: flex;
   justify-content: center;
   gap: 5.5%;
-  border-radius: 24px;
+  align-items: center;
+  border-radius: 20px;
   background: linear-gradient(180deg, rgba(227, 218, 229, 0.54), rgba(176, 166, 183, 0.38));
   backdrop-filter: blur(6px);
   box-shadow:
@@ -562,11 +563,16 @@ select {
   height: 84px;
   max-width: 108px;
   object-fit: contain;
-  filter: saturate(0) brightness(0) invert(76%) sepia(20%) saturate(746%) hue-rotate(217deg) brightness(96%) contrast(92%);
-}
-
-.category-strip__icon--tinted {
-  filter: saturate(0) brightness(0) invert(74%) sepia(27%) saturate(953%) hue-rotate(219deg) brightness(98%) contrast(90%);
+  opacity: 0.92;
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(76%)
+    sepia(31%)
+    saturate(1143%)
+    hue-rotate(218deg)
+    brightness(94%)
+    contrast(92%);
 }
 
 .category-strip__label {
