@@ -878,6 +878,571 @@ select {
   transform: translateY(-50%) rotate(45deg);
 }
 
+.popular-banner {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  color: #fff;
+  background: linear-gradient(180deg, rgba(88, 8, 82, 0.18), rgba(75, 5, 62, 0.3));
+}
+
+.popular-banner__backdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(116, 11, 103, 0.16), rgba(92, 6, 76, 0.28)),
+    url("/popular-bg-04.png") center 42% / 112% auto no-repeat;
+}
+
+.popular-banner__inner {
+  position: relative;
+  width: min(100%, 1920px);
+  min-height: 750px;
+  margin: 0 auto;
+  padding: 56px 24px 72px;
+}
+
+.popular-banner__title {
+  margin: 0;
+  text-align: center;
+  font-size: clamp(42px, 4.4vw, 72px);
+  line-height: 1.02;
+  font-weight: 800;
+  font-family: "Arial Black", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  text-shadow: 0 10px 28px rgba(51, 0, 38, 0.28);
+}
+
+.popular-banner__grid {
+  width: min(1320px, 100%);
+  margin: 140px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 96px 152px;
+}
+
+.popular-banner__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popular-banner__image-shell {
+  width: 100%;
+  max-width: 242px;
+  aspect-ratio: 242 / 288;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow:
+    0 24px 44px rgba(58, 2, 46, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.62);
+}
+
+.popular-banner__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.popular-banner__label {
+  margin: 18px 0 0;
+  width: min(100%, 260px);
+  text-align: center;
+  font-size: clamp(20px, 1.7vw, 25px);
+  line-height: 1.08;
+  font-weight: 800;
+  font-family: "Arial Rounded MT Bold", "Trebuchet MS", "Segoe UI", sans-serif;
+  text-shadow: 0 6px 18px rgba(44, 0, 32, 0.28);
+}
+
+.male-banner {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  color: #fff;
+  background: linear-gradient(180deg, rgba(78, 5, 68, 0.22), rgba(64, 4, 53, 0.34));
+}
+
+.male-banner__backdrop {
+  position: absolute;
+  inset: 0;
+  background: url("/male-bg-05.png") center top / cover no-repeat;
+}
+
+.male-banner__inner {
+  position: relative;
+  width: min(100%, 1920px);
+  margin: 0 auto;
+  padding: 54px 24px 78px;
+}
+
+.male-banner__title {
+  margin: 0;
+  text-align: center;
+  font-size: clamp(42px, 4.4vw, 72px);
+  line-height: 1.02;
+  font-weight: 800;
+  font-family: "Arial Black", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  text-shadow: 0 10px 28px rgba(48, 0, 37, 0.28);
+}
+
+.male-banner__rows {
+  width: min(1320px, 100%);
+  margin: 72px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.male-banner__row {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(420px, 1.12fr);
+  gap: 84px;
+  align-items: center;
+}
+
+.male-banner__row--reverse {
+  grid-template-columns: minmax(420px, 1.12fr) minmax(0, 0.88fr);
+}
+
+.male-banner__row--reverse .male-banner__copy-block {
+  order: 2;
+  text-align: right;
+  align-items: flex-end;
+}
+
+.male-banner__row--reverse .male-banner__product-shell {
+  order: 1;
+}
+
+.male-banner__row:nth-child(3) {
+  margin-top: 12px;
+}
+
+.male-banner__copy-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.male-banner__headline {
+  margin: 0;
+  max-width: 18ch;
+  font-size: clamp(32px, 3.45vw, 58px);
+  line-height: 1.06;
+  font-weight: 800;
+  font-family: "Arial Black", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0 10px 24px rgba(46, 0, 33, 0.24);
+}
+
+.male-banner__copy {
+  margin-top: 28px;
+}
+
+.male-banner__copy-line {
+  margin: 0;
+  font-size: clamp(15px, 1.32vw, 25px);
+  line-height: 1.1;
+  font-weight: 800;
+  font-family: "Arial Rounded MT Bold", "Trebuchet MS", "Segoe UI", sans-serif;
+  text-shadow: 0 6px 16px rgba(46, 0, 33, 0.18);
+}
+
+.male-banner__button {
+  margin-top: 34px;
+  position: relative;
+  min-width: 172px;
+  min-height: 42px;
+  padding: 0 50px 0 16px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(180deg, #ff22ca 0%, #d400a8 100%);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.28),
+    0 10px 22px rgba(91, 0, 75, 0.22);
+}
+
+.male-banner__button-label {
+  display: block;
+  font-size: clamp(14px, 0.95vw, 18px);
+  line-height: 1;
+  font-weight: 800;
+  font-family: "Arial Rounded MT Bold", "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.male-banner__button-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.92);
+}
+
+.male-banner__button-icon::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.male-banner__product-shell {
+  width: 100%;
+  border-radius: 26px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow:
+    0 24px 46px rgba(52, 0, 42, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.64);
+}
+
+.male-banner__product {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.women-grid-banner {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  color: #fff;
+  background: #a56aa0;
+}
+
+.women-grid-banner__backdrop {
+  position: absolute;
+  inset: 0;
+  background: url("/women-bg-06.png") center top / cover no-repeat;
+}
+
+.women-grid-banner__inner {
+  position: relative;
+  width: min(100%, 1920px);
+  margin: 0 auto;
+  padding: 54px 24px 86px;
+}
+
+.women-grid-banner__title {
+  margin: 0;
+  text-align: center;
+  font-size: clamp(42px, 4.4vw, 72px);
+  line-height: 1.02;
+  font-weight: 800;
+  font-family: "Arial Black", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  text-shadow: 0 10px 28px rgba(48, 0, 37, 0.18);
+}
+
+.women-grid-banner__grid {
+  width: min(1000px, 100%);
+  margin: 72px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 34px;
+  align-items: stretch;
+}
+
+.women-grid-banner__card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 22px;
+  background: transparent;
+}
+
+.women-grid-banner__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 22px 22px 0 0;
+  box-shadow: 0 18px 38px rgba(67, 10, 57, 0.12);
+}
+
+.women-grid-banner__copy {
+  position: relative;
+  margin-top: 0;
+  flex: 1 0 210px;
+  padding: 20px 28px 24px;
+  min-height: 210px;
+  border-radius: 0 0 22px 22px;
+  background: rgb(196, 9, 141);
+  box-shadow: 0 18px 36px rgba(67, 10, 57, 0.1);
+}
+
+.women-grid-banner__headline {
+  margin: 0;
+  padding-right: 0;
+  font-size: clamp(24px, 2vw, 38px);
+  line-height: 1.04;
+  font-weight: 800;
+  font-family: "Arial Black", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  text-shadow: 0 6px 16px rgba(95, 0, 63, 0.18);
+}
+
+.women-grid-banner__lines {
+  margin-top: 18px;
+  padding-right: 156px;
+}
+
+.women-grid-banner__line {
+  margin: 0;
+  font-size: clamp(14px, 1.05vw, 20px);
+  line-height: 1.02;
+  font-weight: 800;
+  font-family: "Arial Rounded MT Bold", "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.women-grid-banner__button {
+  position: absolute;
+  right: 22px;
+  bottom: 24px;
+  min-width: 140px;
+  min-height: 32px;
+  padding: 0 14px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.92);
+  color: #d200a7;
+  box-shadow: 0 10px 20px rgba(100, 0, 74, 0.14);
+}
+
+.women-grid-banner__button-label {
+  display: block;
+  font-size: clamp(12px, 0.78vw, 15px);
+  line-height: 1;
+  font-weight: 800;
+  font-family: "Arial Rounded MT Bold", "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.trust-banner {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background: rgb(238, 213, 255);
+}
+
+.trust-banner__inner {
+  position: relative;
+  width: min(100%, 1920px);
+  aspect-ratio: 1920 / 1080;
+  margin: 0 auto;
+  overflow: hidden;
+  background: url("/trust-scene-07.png") center center / cover no-repeat;
+}
+
+.trust-banner__messages {
+  position: absolute;
+  inset: 0;
+}
+
+.trust-banner__message {
+  position: absolute;
+}
+
+.trust-banner__message--1 {
+  left: 17.6042%;
+  top: 9.2593%;
+  width: 53.8021%;
+  height: 16.1111%;
+}
+
+.trust-banner__message--2 {
+  left: 12.5521%;
+  top: 29.6296%;
+  width: 55.6771%;
+  height: 16.1111%;
+}
+
+.trust-banner__message--3 {
+  left: 9.6875%;
+  top: 50%;
+  width: 55.2083%;
+  height: 16.1111%;
+}
+
+.trust-banner__message--4 {
+  left: 5.1563%;
+  top: 70.3704%;
+  width: 52.3958%;
+  height: 16.1111%;
+}
+
+.trust-banner__message-copy {
+  position: absolute;
+  left: 4.0668%;
+  top: 25.2874%;
+  right: 4.2594%;
+  bottom: 12.6437%;
+  color: #fff;
+  overflow: hidden;
+}
+
+.trust-banner__line-row {
+  display: block;
+  white-space: nowrap;
+}
+
+.trust-banner__line {
+  display: inline-block;
+  font-family: "AlimamaFangYuanTiVF", "Arial Rounded MT Bold", "Trebuchet MS", "Segoe UI", sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 0 8px 18px rgba(119, 0, 94, 0.12);
+  font-size: clamp(20px, 1.98vw, 38px);
+}
+
+.trust-banner__line--accent {
+  margin: 0 0.04em 0 0;
+  font-size: clamp(32px, 3.34vw, 64px);
+  font-family: "HelloFont", "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+}
+
+.trust-banner__message--1 .trust-banner__message-copy {
+  left: 4.0658%;
+  top: 22.9885%;
+}
+
+.trust-banner__message--2 .trust-banner__message-copy {
+  left: 4.3031%;
+  top: 20.6897%;
+}
+
+.trust-banner__message--3 .trust-banner__message-copy {
+  left: 4.1509%;
+  top: 22.9885%;
+}
+
+.trust-banner__message--4 .trust-banner__message-copy {
+  left: 3.3797%;
+  top: 19.5402%;
+}
+
+.reviews-banner {
+  position: relative;
+  z-index: 1;
+  background: rgb(238, 213, 255);
+}
+
+.reviews-banner__inner {
+  width: min(100%, 1920px);
+  margin: 0 auto;
+  padding: 54px 24px 78px;
+}
+
+.reviews-banner__title {
+  margin: 0;
+  text-align: center;
+  color: rgb(211, 0, 148);
+  font-size: clamp(42px, 4.8vw, 96px);
+  line-height: 1;
+  font-weight: 800;
+  font-family: "Arial Black", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  text-shadow: 0 6px 0 rgba(150, 0, 112, 0.08);
+}
+
+.reviews-banner__grid {
+  width: min(1526px, 100%);
+  margin: 78px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px 24px;
+}
+
+.reviews-banner__card {
+  min-height: 515px;
+  padding: 28px 30px 20px;
+  background: rgb(68, 31, 59);
+  color: #fff;
+}
+
+.reviews-banner__body {
+  margin: 0;
+  min-height: 300px;
+  font-size: clamp(20px, 1.18vw, 29px);
+  line-height: 1.16;
+  font-family: "Century Gothic", "Trebuchet MS", "Segoe UI", sans-serif;
+  letter-spacing: -0.01em;
+  white-space: pre-line;
+}
+
+.reviews-banner__stars {
+  margin-top: 16px;
+  display: flex;
+  gap: 4px;
+}
+
+.reviews-banner__star-box {
+  width: 54px;
+  height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgb(210, 57, 161), rgb(190, 24, 145));
+  color: #fff;
+  font-size: 38px;
+  line-height: 1;
+}
+
+.reviews-banner__author {
+  margin: 18px 0 0;
+  font-size: clamp(22px, 1.5vw, 42px);
+  line-height: 1.1;
+  font-family: "Century Gothic", "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.reviews-banner__rating-bar {
+  margin-top: 14px;
+  width: min(372px, 100%);
+  height: 33px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, rgb(217, 65, 177), rgb(193, 34, 211));
+}
+
+.reviews-banner__rating-label {
+  color: #fff;
+  font-size: clamp(11px, 0.78vw, 16px);
+  line-height: 1;
+  font-family: "Century Gothic", "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.reviews-banner__button {
+  margin: 58px auto 0;
+  width: fit-content;
+  min-width: 170px;
+  min-height: 54px;
+  padding: 0 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid rgba(52, 26, 52, 0.9);
+  border-radius: 999px;
+  color: rgb(39, 28, 40);
+  font-size: clamp(18px, 1.25vw, 29px);
+  line-height: 1;
+  font-family: "Century Gothic", "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
 @media (max-width: 1100px) {
   .masthead__inner {
     grid-template-columns: 1fr;
@@ -973,6 +1538,148 @@ select {
     top: 84.2%;
     width: 14%;
     font-size: 15px;
+  }
+
+  .popular-banner__inner {
+    min-height: 0;
+    padding: 48px 24px 60px;
+  }
+
+  .popular-banner__grid {
+    margin-top: 88px;
+    gap: 54px 56px;
+  }
+
+  .popular-banner__label {
+    width: min(100%, 220px);
+    font-size: clamp(18px, 1.8vw, 22px);
+  }
+
+  .male-banner__inner {
+    padding: 48px 24px 60px;
+  }
+
+  .male-banner__rows {
+    margin-top: 56px;
+    gap: 54px;
+  }
+
+  .male-banner__row,
+  .male-banner__row--reverse {
+    grid-template-columns: 1fr 1.15fr;
+    gap: 36px;
+  }
+
+  .male-banner__headline {
+    font-size: clamp(28px, 3vw, 44px);
+  }
+
+  .male-banner__copy {
+    margin-top: 20px;
+  }
+
+  .male-banner__copy-line {
+    font-size: clamp(14px, 1.3vw, 18px);
+  }
+
+  .male-banner__button {
+    margin-top: 24px;
+  }
+
+  .women-grid-banner__inner {
+    padding: 48px 24px 60px;
+  }
+
+  .women-grid-banner__grid {
+    width: min(920px, 100%);
+    margin-top: 56px;
+    gap: 24px;
+  }
+
+  .women-grid-banner__copy {
+    flex-basis: 176px;
+    padding: 16px 20px 20px;
+    min-height: 176px;
+  }
+
+  .women-grid-banner__headline {
+    padding-right: 0;
+    font-size: clamp(20px, 1.9vw, 30px);
+  }
+
+  .women-grid-banner__lines {
+    padding-right: 128px;
+  }
+
+  .women-grid-banner__line {
+    font-size: clamp(12px, 0.95vw, 16px);
+  }
+
+  .women-grid-banner__button {
+    right: 16px;
+    bottom: 18px;
+    min-width: 124px;
+  }
+
+  .trust-banner__inner {
+    aspect-ratio: 1920 / 1080;
+  }
+
+  .trust-banner__message--1 {
+    left: 17.6%;
+    top: 23.4%;
+    width: 53.8%;
+    height: 16.1%;
+  }
+
+  .trust-banner__message--2 {
+    left: 12.6%;
+    top: 43%;
+    width: 55.7%;
+    height: 16.1%;
+  }
+
+  .trust-banner__message--3 {
+    left: 9.7%;
+    top: 62.6%;
+    width: 55.2%;
+    height: 16.1%;
+  }
+
+  .trust-banner__message--4 {
+    left: 5.2%;
+    top: 82%;
+    width: 52.4%;
+    height: 16.1%;
+  }
+
+  .trust-banner__message-copy {
+    left: 28px;
+    top: 22px;
+    right: 26px;
+    bottom: 18px;
+  }
+
+  .trust-banner__line {
+    font-size: clamp(22px, 2.35vw, 42px);
+  }
+
+  .trust-banner__line--accent {
+    font-size: clamp(42px, 4vw, 66px);
+  }
+
+  .reviews-banner__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: min(1120px, 100%);
+  }
+
+  .reviews-banner__card {
+    min-height: 470px;
+  }
+
+  .reviews-banner__body {
+    min-height: 248px;
+    font-size: clamp(18px, 1.5vw, 24px);
   }
 }
 
@@ -1366,5 +2073,244 @@ select {
     left: 5px;
     width: 6px;
     height: 8px;
+  }
+
+  .popular-banner__inner {
+    padding: 36px 16px 44px;
+  }
+
+  .popular-banner__title {
+    font-size: clamp(32px, 7.8vw, 44px);
+  }
+
+  .popular-banner__grid {
+    margin-top: 42px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px 16px;
+  }
+
+  .popular-banner__image-shell {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .popular-banner__label {
+    margin-top: 12px;
+    width: 100%;
+    font-size: clamp(16px, 4.1vw, 21px);
+  }
+
+  .male-banner__inner {
+    padding: 34px 16px 42px;
+  }
+
+  .male-banner__title {
+    font-size: clamp(32px, 7.8vw, 44px);
+  }
+
+  .male-banner__rows {
+    margin-top: 34px;
+    gap: 32px;
+  }
+
+  .male-banner__row,
+  .male-banner__row--reverse {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .male-banner__row--reverse .male-banner__copy-block {
+    order: 2;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .male-banner__row--reverse .male-banner__product-shell {
+    order: 1;
+  }
+
+  .male-banner__row:nth-child(3) {
+    margin-top: 0;
+  }
+
+  .male-banner__headline {
+    max-width: none;
+    font-size: clamp(28px, 7vw, 40px);
+  }
+
+  .male-banner__copy {
+    margin-top: 14px;
+  }
+
+  .male-banner__copy-line {
+    font-size: clamp(15px, 4vw, 18px);
+  }
+
+  .male-banner__button {
+    margin-top: 18px;
+    min-width: 164px;
+    min-height: 40px;
+  }
+
+  .male-banner__product-shell {
+    border-radius: 18px;
+  }
+
+  .women-grid-banner__inner {
+    padding: 34px 16px 42px;
+  }
+
+  .women-grid-banner__title {
+    font-size: clamp(32px, 7.8vw, 44px);
+  }
+
+  .women-grid-banner__grid {
+    margin-top: 34px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .women-grid-banner__card {
+    border-radius: 18px;
+  }
+
+  .women-grid-banner__image {
+    border-radius: 18px 18px 0 0;
+  }
+
+  .women-grid-banner__copy {
+    flex-basis: auto;
+    padding: 14px 16px 18px;
+    min-height: 0;
+    border-radius: 0 0 18px 18px;
+  }
+
+  .women-grid-banner__headline {
+    padding-right: 0;
+    font-size: clamp(21px, 5.6vw, 28px);
+  }
+
+  .women-grid-banner__lines {
+    margin-top: 14px;
+    padding-right: 0;
+    padding-bottom: 46px;
+  }
+
+  .women-grid-banner__line {
+    font-size: clamp(14px, 3.6vw, 17px);
+  }
+
+  .women-grid-banner__button {
+    right: 14px;
+    bottom: 14px;
+    min-width: 118px;
+    min-height: 30px;
+  }
+
+  .trust-banner__inner {
+    aspect-ratio: auto;
+    min-height: 860px;
+    background-position: 64% center;
+  }
+
+  .trust-banner__messages {
+    position: relative;
+    inset: auto;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    padding-top: 360px;
+  }
+
+  .trust-banner__message {
+    position: relative;
+    width: 100%;
+    min-height: 112px;
+  }
+
+  .trust-banner__message--1,
+  .trust-banner__message--2,
+  .trust-banner__message--3,
+  .trust-banner__message--4 {
+    left: auto;
+    top: auto;
+    height: auto;
+  }
+
+  .trust-banner__message + .trust-banner__message,
+  .trust-banner__message--2,
+  .trust-banner__message--3,
+  .trust-banner__message--4 {
+    margin-top: 12px;
+  }
+
+  .trust-banner__message-copy {
+    left: 18px;
+    top: 18px;
+    right: 18px;
+    bottom: 14px;
+  }
+
+  .trust-banner__line-row {
+    white-space: normal;
+  }
+
+  .trust-banner__line {
+    font-size: clamp(16px, 4.6vw, 24px);
+    line-height: 1.1;
+  }
+
+  .trust-banner__line--accent {
+    font-size: clamp(28px, 8.4vw, 42px);
+  }
+
+  .reviews-banner__inner {
+    padding: 34px 14px 46px;
+  }
+
+  .reviews-banner__title {
+    font-size: clamp(34px, 10vw, 54px);
+  }
+
+  .reviews-banner__grid {
+    margin-top: 34px;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .reviews-banner__card {
+    min-height: 0;
+    padding: 22px 18px 18px;
+  }
+
+  .reviews-banner__body {
+    min-height: 0;
+    font-size: clamp(18px, 4.8vw, 24px);
+  }
+
+  .reviews-banner__star-box {
+    width: 42px;
+    height: 42px;
+    font-size: 28px;
+  }
+
+  .reviews-banner__author {
+    font-size: clamp(20px, 5.4vw, 28px);
+  }
+
+  .reviews-banner__rating-bar {
+    width: 100%;
+    height: 30px;
+    padding: 0 12px;
+  }
+
+  .reviews-banner__rating-label {
+    font-size: 12px;
+  }
+
+  .reviews-banner__button {
+    margin-top: 36px;
+    min-width: 154px;
+    min-height: 48px;
+    font-size: 18px;
   }
 }
