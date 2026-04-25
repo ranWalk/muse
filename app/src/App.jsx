@@ -28,6 +28,12 @@ const categoryIcons = [
   { label: 'Masturbator', src: '/icon-7.png' },
 ];
 
+const featureHighlights = [
+  '/feature-icon-1.png',
+  '/feature-icon-2.png',
+  '/feature-icon-3.png',
+];
+
 function App() {
   const [selectedLanguage, setSelectedLanguage] = useState(languageOptions[0].code);
   const activeLanguage =
@@ -163,6 +169,67 @@ function App() {
               <span className="category-strip__label">{item.label}</span>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="feature-showcase" aria-label="G-spot massage product feature">
+        <div className="feature-showcase__backdrop" />
+
+        <div className="feature-showcase__stage">
+          <div className="feature-showcase__product-zone" aria-hidden="true">
+            <span className="feature-showcase__halo feature-showcase__halo--large" />
+            <span className="feature-showcase__halo feature-showcase__halo--small" />
+            <img className="feature-showcase__base" src="/feature-product-base.png" alt="" />
+            <img
+              className="feature-showcase__heat"
+              src="/feature-heat-effect.png"
+              alt=""
+            />
+            <img
+              className="feature-showcase__product"
+              src="/feature-product-main.png"
+              alt=""
+            />
+          </div>
+
+          <div className="feature-showcase__info">
+            <div className="feature-showcase__text-box">
+              <p className="feature-showcase__eyebrow">G-spot massage</p>
+              <h2 className="feature-showcase__title">Female masturbation vibrator</h2>
+
+              <ul className="feature-showcase__copy">
+                <li className="feature-showcase__line">
+                  10 frequency tongue licking+10 frequency vibration+6 frequency stretching
+                </li>
+                <li className="feature-showcase__line">
+                  Stable, strong, low-noise, light tone, high-frequency tremor
+                </li>
+                <li className="feature-showcase__line">
+                  8000 sensitive nerves precisely wrapped for stimulation
+                </li>
+              </ul>
+
+              <p className="feature-showcase__tagline">Enjoy the joy of a pile driver</p>
+            </div>
+          </div>
+
+          <div className="feature-showcase__highlights" aria-label="Product detail views">
+            {featureHighlights.map((src, index) => (
+              <span key={src} className={`feature-showcase__highlight-shell feature-showcase__highlight-shell--${index + 1}`}>
+                <span className="feature-showcase__highlight-ring" aria-hidden="true" />
+                <img
+                  className="feature-showcase__highlight"
+                  src={src}
+                  alt={`Product detail view ${index + 1}`}
+                />
+              </span>
+            ))}
+          </div>
+
+          <a className="feature-showcase__button" href="/">
+            <span className="feature-showcase__button-label">VIEW DETAILS</span>
+            <span className="feature-showcase__button-icon" aria-hidden="true" />
+          </a>
         </div>
       </section>
     </main>
