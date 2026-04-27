@@ -232,6 +232,40 @@ const sexEdCards = [
   },
 ];
 
+const footerInfoColumns = [
+  ['About Us', 'Our Story', 'Our Promise', 'Media/Business Inquiry', 'Affilaties/wholesale', 'Join our Team'],
+  ['Customer Services', 'Customer Reviews', "Frequently Asked Q's", 'Blog (IMB Sex Guide)', 'Discounts & Deals', 'In the news'],
+];
+
+const footerSocialLinks = [
+  { label: 'Instagram', mark: '◎' },
+  { label: 'Facebook', mark: 'f' },
+  { label: 'X', mark: 'X' },
+  { label: 'LinkedIn', mark: 'in' },
+  { label: 'YouTube', mark: '▶' },
+  { label: 'Reddit', mark: '●' },
+];
+
+const footerCustomerActions = [
+  "FAQ'S",
+  'TRACK ORDER',
+  'SCHEDULE CALL BACK',
+  'CALL US',
+  'EMAIL US',
+  'VIP SUPPORT',
+  'LIVE CHAT',
+  'RETURNS & EXCHANGE',
+  'CANCEL MY ORDER',
+];
+
+const footerContactChannels = [
+  { icon: 'M', label: 'EMAIL' },
+  { icon: 'T', label: 'CALL US' },
+  { icon: 'P', label: 'CALL BACK' },
+  { icon: 'C', label: 'LIVE CHAT' },
+  { icon: 'W', label: 'WHATSAPP' },
+];
+
 function App() {
   const [selectedLanguage, setSelectedLanguage] = useState(languageOptions[0].code);
   const activeLanguage =
@@ -593,6 +627,76 @@ function App() {
           </div>
         </div>
       </section>
+
+      <footer className="site-footer" aria-label="AylaMuse footer">
+        <div className="site-footer__stage" aria-hidden="true" />
+
+        <div className="site-footer__content">
+          <p className="site-footer__bubble">have you<br /><span>seen my</span><br />AylaMuse ?</p>
+
+          <section className="site-footer__brand" aria-label="AylaMuse social links">
+            <img className="site-footer__logo" src="/footer-logo.png" alt="AylaMuse" />
+            <p className="site-footer__tagline">AylaMuse-For the muse in you</p>
+
+            <div className="site-footer__socials">
+              {footerSocialLinks.map((item) => (
+                <a key={item.label} className="site-footer__social-link" href="/" aria-label={`${item.label} social`}>
+                  {item.mark}
+                </a>
+              ))}
+            </div>
+          </section>
+
+          <section className="site-footer__info" aria-label="Footer information">
+            <h2 className="site-footer__heading">INFORMATION</h2>
+
+            <div className="site-footer__info-columns">
+              {footerInfoColumns.map((column, columnIndex) => (
+                <ul key={columnIndex} className="site-footer__info-list">
+                  {column.map((item) => (
+                    <li key={item}>
+                      <a href="/">{item}</a>
+                    </li>
+                  ))}
+                </ul>
+              ))}
+            </div>
+          </section>
+
+          <section className="site-footer__motto" aria-label="AylaMuse motto">
+            <p># play<br />more<br />shame<br />less</p>
+            <img src="/footer-logo.png" alt="AylaMuse" />
+            <small>AylaMuse-For the muse in you</small>
+          </section>
+
+          <section className="site-footer__customer" aria-label="Customer center">
+            <h2 className="site-footer__heading">CUSTOMER CENTER</h2>
+
+            <div className="site-footer__action-list">
+              {footerCustomerActions.map((item) => (
+                <a key={item} className="site-footer__action" href="/">
+                  {item}
+                </a>
+              ))}
+            </div>
+
+            <div className="site-footer__channels">
+              {footerContactChannels.map((item) => (
+                <a key={item.label} className="site-footer__channel" href="/">
+                  <span>{item.icon}</span>
+                  <small>{item.label}</small>
+                </a>
+              ))}
+            </div>
+          </section>
+
+          <div className="site-footer__trust" aria-label="Trustpilot rating">
+            <strong>Trustpilot</strong>
+            <span>★★★★★</span>
+            <small>TrustScore 4.8 | 706 reviews</small>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
